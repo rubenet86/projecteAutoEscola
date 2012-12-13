@@ -1,5 +1,5 @@
-<?php 
-class Alumno{
+<?php
+class Alumno {
 	var $login;
 	var $password;
 	var $nombre;
@@ -10,7 +10,7 @@ class Alumno{
 	var $sexo;
 }
 
-class Profesor{
+class Profesor {
 	var $login;
 	var $password;
 	var $nombre;
@@ -21,22 +21,22 @@ class Profesor{
 	var $sexo;
 }
 
-class Coche{
+class Coche {
 	var $matricula;
 	var $marca;
 	var $modelo;
 	var $color;
 }
 
-class Practica{
+class Practica {
 	var $numPractica;
 	var $loginAlumno;
 	var $loginProfesor;
 	var $matricula;
 	var $fecha;
 }
-function alert($texto){
-	echo "<script>alert('".$texto."');</script>";
-}
 
+function alert($texto) {
+	echo "<script>alert('" . $texto . "');</script>";
+}
 ?>

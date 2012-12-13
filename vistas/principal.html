@@ -9,48 +9,86 @@
 		<script type="text/javascript" src="../jcalendar/calendar-setup.js"></script>
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
 	</head>
-<body>
-	<section id="cabecera">
-		<p>Autoescuela Cuela</p>
-	</section>
-	<section id="menu">
-	<ul>
-		<li id="alumnos">Alumnos
+	<body>
+		<section id="cabecera">
+			<p>
+				Autoescuela Cuela
+			</p>
+		</section>
+		<section id="menu">
 			<ul>
-				<li id="C1" class="claseMenu"><a href="../controlador/index.php?controlador=alumnos&accion=alta">Alta</a></li>
-				<li id="C2" class="claseMenu"><a href="../controlador/index.php?controlador=alumnos&accion=modificar">Modificar</a></li>
-				<li id="C3" class="claseMenu"><a href="../controlador/index.php?controlador=alumnos&accion=eliminar">Eliminar</a></li>
-				<li id="C4" class="claseMenu"><a href="../controlador/index.php?controlador=alumnos&accion=buscar">Consulta</a></li>
+				<li id="alumnos">
+					Alumnos
+					<ul>
+						<li id="C1" class="claseMenu">
+							<a href="../controlador/index.php?controlador=alumnos&accion=alta">Alta</a>
+						</li>
+						<li id="C2" class="claseMenu">
+							<a href="../controlador/index.php?controlador=alumnos&accion=modificar">Modificar</a>
+						</li>
+						<li id="C3" class="claseMenu">
+							<a href="../controlador/index.php?controlador=alumnos&accion=eliminar">Eliminar</a>
+						</li>
+						<li id="C4" class="claseMenu">
+							<a href="../controlador/index.php?controlador=alumnos&accion=buscar">Consulta</a>
+						</li>
+					</ul>
+				</li>
+				<li id="profesores">
+					Profesores
+					<ul>
+						<li id="P1" class="claseMenu">
+							<a href="../controlador/index.php?controlador=profesores&accion=alta">Alta</a>
+						</li>
+						<li id="P2" class="claseMenu">
+							<a href="../controlador/index.php?controlador=profesores&accion=modificar">Modificar</a>
+						</li>
+						<li id="P3" class="claseMenu">
+							<a href="../controlador/index.php?controlador=profesores&accion=eliminar">Eliminar</a>
+						</li>
+						<li id="P4" class="claseMenu">
+							<a href="../controlador/index.php?controlador=profesores&accion=buscar">Consulta</a>
+						</li>
+					</ul>
+				</li>
+				<li id="coches">
+					Coches
+					<ul>
+						<li id="X1" class="claseMenu">
+							<a href="../controlador/index.php?controlador=coches&accion=alta">Alta</a>
+						</li>
+						<li id="X2" class="claseMenu">
+							<a href="../controlador/index.php?controlador=coches&accion=modificar">Modificar</a>
+						</li>
+						<li id="X3" class="claseMenu">
+							<a href="../controlador/index.php?controlador=coches&accion=eliminar">Eliminar</a>
+						</li>
+						<li id="X4" class="claseMenu">
+							<a href="../controlador/index.php?controlador=coches&accion=buscar">Consulta</a>
+						</li>
+					</ul>
+				</li>
+				<li id="practicas">
+					Practicas
+					<ul>
+						<li id="Z1" class="claseMenu">
+							<a href="../controlador/index.php?controlador=practicas&accion=alta">Nueva</a>
+						</li>
+						<li id="Z2" class="claseMenu">
+							<a href="../controlador/index.php?controlador=practicas&accion=modificar">Modificar</a>
+						</li>
+						<li id="Z3" class="claseMenu">
+							<a href="../controlador/index.php?controlador=practicas&accion=eliminar">Eliminar</a>
+						</li>
+						<li id="Z4" class="claseMenu">
+							<a href="../controlador/index.php?controlador=practicas&accion=buscar">Consulta</a>
+						</li>
+					</ul>
+				</li>
+				<li id="salir">
+					<a href="../index.php">Salir</a>
+				</li>
 			</ul>
-		</li>
-		<li id="profesores">Profesores
-			<ul>
-				<li id="P1" class="claseMenu"><a href="../controlador/index.php?controlador=profesores&accion=alta">Alta</a></li>
-				<li id="P2" class="claseMenu"><a href="../controlador/index.php?controlador=profesores&accion=modificar">Modificar</a></li>
-				<li id="P3" class="claseMenu"><a href="../controlador/index.php?controlador=profesores&accion=eliminar">Eliminar</a></li>
-				<li id="P4" class="claseMenu"><a href="../controlador/index.php?controlador=profesores&accion=buscar">Consulta</a></li>
-			</ul>
-		</li>
-		<li id="coches">Coches
-			<ul>
-				<li id="X1" class="claseMenu"><a href="../controlador/index.php?controlador=coches&accion=alta">Alta</a></li>
-				<li id="X2" class="claseMenu"><a href="../controlador/index.php?controlador=coches&accion=modificar">Modificar</a></li>
-				<li id="X3" class="claseMenu"><a href="../controlador/index.php?controlador=coches&accion=eliminar">Eliminar</a></li>
-				<li id="X4" class="claseMenu"><a href="../controlador/index.php?controlador=coches&accion=buscar">Consulta</a></li>
-			</ul>
-		</li>
-		<li id="practicas">Practicas
-			<ul>
-				<li id="Z1" class="claseMenu"><a href="../controlador/index.php?controlador=practicas&accion=alta">Nueva</a></li>
-				<li id="Z2" class="claseMenu"><a href="../controlador/index.php?controlador=practicas&accion=modificar">Modificar</a></li>
-				<li id="Z3" class="claseMenu"><a href="../controlador/index.php?controlador=practicas&accion=eliminar">Eliminar</a></li>
-				<li id="Z4" class="claseMenu"><a href="../controlador/index.php?controlador=practicas&accion=buscar">Consulta</a></li>
-			</ul>
-		</li>
-			<li id="salir"><a href="../index.php">Salir</a>
-		</li>
-	</ul>
-	<h2>MENU PRINCIPAL</h2>
-	</section>
-	
+			<h2>MENU PRINCIPAL</h2>
+		</section>
 

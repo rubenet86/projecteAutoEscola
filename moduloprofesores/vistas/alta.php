@@ -1,13 +1,12 @@
-
 <section id="tabla">
-	
-<form name="formulario" action="../controlador/index.php?controlador=profesores&accion=recogeDatosAlta" method="post">
+
+	<form name="formulario" action="../controlador/index.php?controlador=profesores&accion=recogeDatosAlta" method="post">
 		<TABLE>
 			<TR>
 				<TD>Login:</TD>
 				<TD>
-				<INPUT TYPE="text" NAME="login" SIZE="20" MAXLENGTH="30" title="Escribe su login" onkeyup="valida_envia(this)" required><!---->
-				</TD>
+				<INPUT TYPE="text" NAME="login" SIZE="20" MAXLENGTH="30" title="Escribe su login" onkeyup="valida_envia(this)" required>
+				<!----></TD>
 				<TD><section id="divLogin"></section></TD>
 			</TR>
 			<TR>

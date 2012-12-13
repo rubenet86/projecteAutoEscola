@@ -1,582 +1,623 @@
 * {
-	
-	margin:0;
-	padding:0;
-	font-family: Verdana,Arial;
+
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial;
 }
-body{
+body {
 	overflow: hidden;
 }
 #cabecera {
-	
-	width:100%;
-	height:48px;
+
+	width: 100%;
+	height: 48px;
 }
 #cabecera p {
-	background-color: #CC0409; font-family: Verdana, Arial;
-	font-size: medium; color: #FFFFFF; font-weight: bold;
-	position: fixed; top: 0; left: 0; width: 100%; height: 3em;/*para poner un encabezado de p�gina*/
-	text-align:center; line-height:40px;/*alinear el texto horiz y vert*/
+	background-color: #CC0409;
+	font-family: Verdana, Arial;
+	font-size: medium;
+	color: #FFFFFF;
+	font-weight: bold;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3em;/*para poner un encabezado de p�gina*/
+	text-align: center;
+	line-height: 40px;/*alinear el texto horiz y vert*/
 }
 #pie p {
-	background-color: #CC0409; font-family: Verdana, Arial;
-	font-size: small; color: #FFFFFF; 
-	position:absolute; bottom:0; left: 0; width: 100%; height: 1.5em;/*para poner un pie de p�gina*/
-	text-align:center; 
+	background-color: #CC0409;
+	font-family: Verdana, Arial;
+	font-size: small;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1.5em;/*para poner un pie de p�gina*/
+	text-align: center;
 }
 #menu {
-	width:100%;
+	width: 100%;
 }
-h2{
+h2 {
 	background-color: royalblue;
-    color: powderblue;
-    height: 38px;
-    padding-left: 71%;
-    padding-top: 4px;
+	color: powderblue;
+	height: 38px;
+	padding-left: 71%;
+	padding-top: 4px;
 }
 h6 {
-	font-size: x-small; 
+	font-size: x-small;
 	color: red;
 	font-weight: lighter;
 }
-#tabla{
-	margin-left:40%;
-	clear:both;
-	margin-top:7%;	
+#tabla {
+	margin-left: 40%;
+	clear: both;
+	margin-top: 7%;
 }
-#tablaResultado{
-	margin-left:20%;
-	clear:both;
-	margin-top:7%;	
+#tablaResultado {
+	margin-left: 20%;
+	clear: both;
+	margin-top: 7%;
 }
-#tablaResultadoCoches{
-	margin-left:40%;
-	clear:both;
-	margin-top:7%;
+#tablaResultadoCoches {
+	margin-left: 40%;
+	clear: both;
+	margin-top: 7%;
 }
-#nada{
-	margin-left:40%;
-	clear:both;
-	margin-top:7%;
+#nada {
+	margin-left: 40%;
+	clear: both;
+	margin-top: 7%;
 }
 ul {
 	list-style: none;
 }
 
 li {
-	width:150px;
-	height:20px;
+	width: 150px;
+	height: 20px;
 	color: blue;
-	background-color:#98D8E0;
-	padding:10px;
+	background-color: #98D8E0;
+	padding: 10px;
 	border: 1px solid blue;
-	float:left;
+	float: left;
 	text-align: center;
 }
 #C1 {
-	position:absolute;
-	left:0px;
-	top:89px;
+	position: absolute;
+	left: 0px;
+	top: 89px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 #C2 {
-	position:absolute;
-	left:0px;
-	top:130px;
+	position: absolute;
+	left: 0px;
+	top: 130px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 #C3 {
-	position:absolute;
-	left:0px;
-	top:171px;
+	position: absolute;
+	left: 0px;
+	top: 171px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 #C4 {
-	position:absolute;
-	left:0px;
-	top:212px;
+	position: absolute;
+	left: 0px;
+	top: 212px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 
-li:hover #C1{ 
+li:hover #C1 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-li:hover #C2{ 
+li:hover #C2 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
-li:hover #C3{ 
+li:hover #C3 {
 	text-decoration: none;
-	display:inline;
-}
-
-li:hover #C4{ 
-	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-#P1{
-	position:absolute;
-	left:172px;
-	top:89px;
+li:hover #C4 {
+	text-decoration: none;
+	display: inline;
+}
+
+#P1 {
+	position: absolute;
+	left: 172px;
+	top: 89px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#P2{
-	position:absolute;
-	left:172px;
-	top:130px;
+#P2 {
+	position: absolute;
+	left: 172px;
+	top: 130px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#P3{
-	position:absolute;
-	left:172px;
-	top:171px;
+#P3 {
+	position: absolute;
+	left: 172px;
+	top: 171px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#P4{
-	position:absolute;
-	left:172px;
-	width:192px;
+#P4 {
+	position: absolute;
+	left: 172px;
+	width: 192px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
-	top:212px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
+	top: 212px;
 }
 
-li:hover #P1{ 
+li:hover #P1 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-li:hover #P2{ 
+li:hover #P2 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
-li:hover #P3{ 
+li:hover #P3 {
 	text-decoration: none;
-	display:inline;
-}
-
-li:hover #P4{ 
-	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-#X1{
-	position:absolute;
-	left:344px;
-	top:89px;
+li:hover #P4 {
+	text-decoration: none;
+	display: inline;
+}
+
+#X1 {
+	position: absolute;
+	left: 344px;
+	top: 89px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#X2{
-	position:absolute;
-	left:344px;
-	top:130px;
+#X2 {
+	position: absolute;
+	left: 344px;
+	top: 130px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#X3{
-	position:absolute;
-	left:344px;
-	top:171px;
+#X3 {
+	position: absolute;
+	left: 344px;
+	top: 171px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#X4{
-	position:absolute;
-	left:344px;
-	top:212px;
+#X4 {
+	position: absolute;
+	left: 344px;
+	top: 212px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 
-li:hover #X1{ 
+li:hover #X1 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-li:hover #X2{ 
+li:hover #X2 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
-li:hover #X3{ 
+li:hover #X3 {
 	text-decoration: none;
-	display:inline;
-}
-
-li:hover #X4{ 
-	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-#Z1{
-	position:absolute;
-	left:516px;
-	top:89px;
+li:hover #X4 {
+	text-decoration: none;
+	display: inline;
+}
+
+#Z1 {
+	position: absolute;
+	left: 516px;
+	top: 89px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#Z2{
-	position:absolute;
-	left:516px;
-	top:130px;
+#Z2 {
+	position: absolute;
+	left: 516px;
+	top: 130px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#Z3{
-	position:absolute;
-	left:516px;
-	top:171px;
+#Z3 {
+	position: absolute;
+	left: 516px;
+	top: 171px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
-#Z4{
-	position:absolute;
-	left:516px;
-	top:212px;
+#Z4 {
+	position: absolute;
+	left: 516px;
+	top: 212px;
 	display: none;
-	width:150px;
-	height:20px;
-	padding:10px;
+	width: 150px;
+	height: 20px;
+	padding: 10px;
 }
 
-li:hover #Z1{ 
+li:hover #Z1 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-li:hover #Z2{ 
+li:hover #Z2 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
-li:hover #Z3{ 
+li:hover #Z3 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-li:hover #Z4{ 
+li:hover #Z4 {
 	text-decoration: none;
-	display:inline;
+	display: inline;
 }
 
-
-
- 
 /* The main calendar widget.  DIV containing a table. */
 
-div.calendar { position: relative; }
+div.calendar {
+	position: relative;
+}
 
 .calendar, .calendar table {
-  border: 1px solid #556;
-  font-size: 11px;
-  color: #000;
-  cursor: default;
-  background: #eef;
-  font-family: tahoma,verdana,sans-serif;
+	border: 1px solid #556;
+	font-size: 11px;
+	color: #000;
+	cursor: default;
+	background: #eef;
+	font-family: tahoma, verdana, sans-serif;
 }
 
 /* Header part -- contains navigation buttons and day names. */
 
-.calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
-  text-align: center;    /* They are the navigation buttons */
-  padding: 2px;          /* Make the buttons seem like they're pressing */
+.calendar .button {/* "<<", "<", ">", ">>" buttons have this class */
+	text-align: center; /* They are the navigation buttons */
+	padding: 2px; /* Make the buttons seem like they're pressing */
 }
 
 .calendar .nav {
-  background: #778 url(menuarrow.gif) no-repeat 100% 100%;
+	background: #778 url(menuarrow.gif) no-repeat 100% 100%;
 }
 
-.calendar thead .title { /* This holds the current "month, year" */
-  font-weight: bold;      /* Pressing it will take you to the current date */
-  text-align: center;
-  background: #fff;
-  color: #000;
-  padding: 2px;
+.calendar thead .title {/* This holds the current "month, year" */
+	font-weight: bold; /* Pressing it will take you to the current date */
+	text-align: center;
+	background: #fff;
+	color: #000;
+	padding: 2px;
 }
 
-.calendar thead .headrow { /* Row <TR> containing navigation buttons */
-  background: #778;
-  color: #fff;
+.calendar thead .headrow {/* Row <TR> containing navigation buttons */
+	background: #778;
+	color: #fff;
 }
 
-.calendar thead .daynames { /* Row <TR> containing the day names */
-  background: #bdf;
+.calendar thead .daynames {/* Row <TR> containing the day names */
+	background: #bdf;
 }
 
-.calendar thead .name { /* Cells <TD> containing the day names */
-  border-bottom: 1px solid #556;
-  padding: 2px;
-  text-align: center;
-  color: #000;
+.calendar thead .name {/* Cells <TD> containing the day names */
+	border-bottom: 1px solid #556;
+	padding: 2px;
+	text-align: center;
+	color: #000;
 }
 
-.calendar thead .weekend { /* How a weekend day name shows in header */
-  color: #a66;
+.calendar thead .weekend {/* How a weekend day name shows in header */
+	color: #a66;
 }
 
-.calendar thead .hilite { /* How do the buttons in header appear when hover */
-  background-color: #aaf;
-  color: #000;
-  border: 1px solid #04f;
-  padding: 1px;
+.calendar thead .hilite {/* How do the buttons in header appear when hover */
+	background-color: #aaf;
+	color: #000;
+	border: 1px solid #04f;
+	padding: 1px;
 }
 
-.calendar thead .active { /* Active (pressed) buttons in header */
-  background-color: #77c;
-  padding: 2px 0px 0px 2px;
+.calendar thead .active {/* Active (pressed) buttons in header */
+	background-color: #77c;
+	padding: 2px 0px 0px 2px;
 }
 
 /* The body part -- contains all the days in month. */
 
-.calendar tbody .day { /* Cells <TD> containing month days dates */
-  width: 2em;
-  color: #456;
-  text-align: right;
-  padding: 2px 4px 2px 2px;
+.calendar tbody .day {/* Cells <TD> containing month days dates */
+	width: 2em;
+	color: #456;
+	text-align: right;
+	padding: 2px 4px 2px 2px;
 }
 .calendar tbody .day.othermonth {
-  font-size: 80%;
-  color: #bbb;
+	font-size: 80%;
+	color: #bbb;
 }
 .calendar tbody .day.othermonth.oweekend {
-  color: #fbb;
+	color: #fbb;
 }
 
 .calendar table .wn {
-  padding: 2px 3px 2px 2px;
-  border-right: 1px solid #000;
-  background: #bdf;
+	padding: 2px 3px 2px 2px;
+	border-right: 1px solid #000;
+	background: #bdf;
 }
 
 .calendar tbody .rowhilite td {
-  background: #def;
+	background: #def;
 }
 
 .calendar tbody .rowhilite td.wn {
-  background: #eef;
+	background: #eef;
 }
 
-.calendar tbody td.hilite { /* Hovered cells <TD> */
-  background: #def;
-  padding: 1px 3px 1px 1px;
-  border: 1px solid #bbb;
+.calendar tbody td.hilite {/* Hovered cells <TD> */
+	background: #def;
+	padding: 1px 3px 1px 1px;
+	border: 1px solid #bbb;
 }
 
-.calendar tbody td.active { /* Active (pressed) cells <TD> */
-  background: #cde;
-  padding: 2px 2px 0px 2px;
+.calendar tbody td.active {/* Active (pressed) cells <TD> */
+	background: #cde;
+	padding: 2px 2px 0px 2px;
 }
 
-.calendar tbody td.selected { /* Cell showing today date */
-  font-weight: bold;
-  border: 1px solid #000;
-  padding: 1px 3px 1px 1px;
-  background: #fff;
-  color: #000;
+.calendar tbody td.selected {/* Cell showing today date */
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 1px 3px 1px 1px;
+	background: #fff;
+	color: #000;
 }
 
-.calendar tbody td.weekend { /* Cells showing weekend days */
-  color: #a66;
+.calendar tbody td.weekend {/* Cells showing weekend days */
+	color: #a66;
 }
 
-.calendar tbody td.today { /* Cell showing selected date */
-  font-weight: bold;
-  color: #00f;
+.calendar tbody td.today {/* Cell showing selected date */
+	font-weight: bold;
+	color: #00f;
 }
 
-.calendar tbody .disabled { color: #999; }
-
-.calendar tbody .emptycell { /* Empty cells (the best is to hide them) */
-  visibility: hidden;
+.calendar tbody .disabled {
+	color: #999;
 }
 
-.calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
-  display: none;
+.calendar tbody .emptycell {/* Empty cells (the best is to hide them) */
+	visibility: hidden;
+}
+
+.calendar tbody .emptyrow {/* Empty row (some months need less than 6 rows) */
+	display: none;
 }
 
 /* The footer part -- status bar and "Close" button */
 
-.calendar tfoot .footrow { /* The <TR> in footer (only one right now) */
-  text-align: center;
-  background: #556;
-  color: #fff;
+.calendar tfoot .footrow {/* The <TR> in footer (only one right now) */
+	text-align: center;
+	background: #556;
+	color: #fff;
 }
 
-.calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
-  background: #fff;
-  color: #445;
-  border-top: 1px solid #556;
-  padding: 1px;
+.calendar tfoot .ttip {/* Tooltip (status bar) cell <TD> */
+	background: #fff;
+	color: #445;
+	border-top: 1px solid #556;
+	padding: 1px;
 }
 
-.calendar tfoot .hilite { /* Hover style for buttons in footer */
-  background: #aaf;
-  border: 1px solid #04f;
-  color: #000;
-  padding: 1px;
+.calendar tfoot .hilite {/* Hover style for buttons in footer */
+	background: #aaf;
+	border: 1px solid #04f;
+	color: #000;
+	padding: 1px;
 }
 
-.calendar tfoot .active { /* Active (pressed) style for buttons in footer */
-  background: #77c;
-  padding: 2px 0px 0px 2px;
+.calendar tfoot .active {/* Active (pressed) style for buttons in footer */
+	background: #77c;
+	padding: 2px 0px 0px 2px;
 }
 
 /* Combo boxes (menus that display months/years for direct selection) */
 
 .calendar .combo {
-  position: absolute;
-  display: none;
-  top: 0px;
-  left: 0px;
-  width: 4em;
-  cursor: default;
-  border: 1px solid #655;
-  background: #def;
-  color: #000;
-  font-size: 90%;
-  z-index: 100;
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 4em;
+	cursor: default;
+	border: 1px solid #655;
+	background: #def;
+	color: #000;
+	font-size: 90%;
+	z-index: 100;
 }
 
-.calendar .combo .label,
-.calendar .combo .label-IEfix {
-  text-align: center;
-  padding: 1px;
+.calendar .combo .label, .calendar .combo .label-IEfix {
+	text-align: center;
+	padding: 1px;
 }
 
 .calendar .combo .label-IEfix {
-  width: 4em;
+	width: 4em;
 }
 
 .calendar .combo .hilite {
-  background: #acf;
+	background: #acf;
 }
 
 .calendar .combo .active {
-  border-top: 1px solid #46a;
-  border-bottom: 1px solid #46a;
-  background: #eef;
-  font-weight: bold;
+	border-top: 1px solid #46a;
+	border-bottom: 1px solid #46a;
+	background: #eef;
+	font-weight: bold;
 }
 
 .calendar td.time {
-  border-top: 1px solid #000;
-  padding: 1px 0px;
-  text-align: center;
-  background-color: #f4f0e8;
+	border-top: 1px solid #000;
+	padding: 1px 0px;
+	text-align: center;
+	background-color: #f4f0e8;
 }
 
-.calendar td.time .hour,
-.calendar td.time .minute,
-.calendar td.time .ampm {
-  padding: 0px 3px 0px 4px;
-  border: 1px solid #889;
-  font-weight: bold;
-  background-color: #fff;
+.calendar td.time .hour, .calendar td.time .minute, .calendar td.time .ampm {
+	padding: 0px 3px 0px 4px;
+	border: 1px solid #889;
+	font-weight: bold;
+	background-color: #fff;
 }
 
 .calendar td.time .ampm {
-  text-align: center;
+	text-align: center;
 }
 
 .calendar td.time .colon {
-  padding: 0px 2px 0px 3px;
-  font-weight: bold;
+	padding: 0px 2px 0px 3px;
+	font-weight: bold;
 }
 
 .calendar td.time span.hilite {
-  border-color: #000;
-  background-color: #667;
-  color: #fff;
+	border-color: #000;
+	background-color: #667;
+	color: #fff;
 }
 
 .calendar td.time span.active {
-  border-color: #f00;
-  background-color: #000;
-  color: #0f0;
+	border-color: #f00;
+	background-color: #000;
+	color: #0f0;
 }
-
 
 .texto_cabecera3 {
 	font-family: Verdana, Arial;
-	font-size: 30px; color: #000099; font-weight: bold;
+	font-size: 30px;
+	color: #000099;
+	font-weight: bold;
 }
 .menu_botones_enlace a {
-	font-size: 90%; font-weight: normal;
+	font-size: 90%;
+	font-weight: normal;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 2mm; margin-right: 1mm; margin-bottom: 2mm;
-	margin-left: auto; border:1px solid #111111;
-	padding:3px; width: 15%; color: #0066CC;
-	background-color: #FFFFFF; text-align: center;
+	margin-top: 2mm;
+	margin-right: 1mm;
+	margin-bottom: 2mm;
+	margin-left: auto;
+	border: 1px solid #111111;
+	padding: 3px;
+	width: 15%;
+	color: #0066CC;
+	background-color: #FFFFFF;
+	text-align: center;
 	text-decoration: none;
 }
 .menu_botones_enlace a:hover {
-	border:1px ridge #0066CC; color: #FFFFFF;
+	border: 1px ridge #0066CC;
+	color: #FFFFFF;
 	background-color: #0066CC;
 }
 .menu_botones_enlace1 a {
-	font-size: 90%; font-weight: normal;
+	font-size: 90%;
+	font-weight: normal;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 2mm; margin-right: 1mm; margin-bottom: 2mm;
-	margin-left: auto; border:1px solid #111111;
-	padding:3px; width: 10%; color: #0066CC;
-	background-color: #FFFFFF; text-align: center;
+	margin-top: 2mm;
+	margin-right: 1mm;
+	margin-bottom: 2mm;
+	margin-left: auto;
+	border: 1px solid #111111;
+	padding: 3px;
+	width: 10%;
+	color: #0066CC;
+	background-color: #FFFFFF;
+	text-align: center;
 	text-decoration: none;
-	position:absolute; float:right; right:54px;
+	position: absolute;
+	float: right;
+	right: 54px;
 }
 .menu_botones_enlace1 a:hover {
-	border:1px ridge #0066CC; color: #FFFFFF;
+	border: 1px ridge #0066CC;
+	color: #FFFFFF;
 	background-color: #0066CC;
 }
 .menu_botones_enlace2 a {
-	font-size: 90%; font-weight: normal;
+	font-size: 90%;
+	font-weight: normal;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 2mm; margin-right: 1mm; margin-bottom: 2mm;
-	margin-left: auto; border:1px solid #111111;
-	padding:3px; width: 10%; color: #0066CC;
-	background-color: #FFFFFF; text-align: center;
+	margin-top: 2mm;
+	margin-right: 1mm;
+	margin-bottom: 2mm;
+	margin-left: auto;
+	border: 1px solid #111111;
+	padding: 3px;
+	width: 10%;
+	color: #0066CC;
+	background-color: #FFFFFF;
+	text-align: center;
 	text-decoration: none;
-	position:absolute; float:right; right:254px;
+	position: absolute;
+	float: right;
+	right: 254px;
 }
 .menu_botones_enlace2 a:hover {
-	border:1px ridge #0066CC; color: #FFFFFF;
+	border: 1px ridge #0066CC;
+	color: #FFFFFF;
 	background-color: #0066CC;
 }
