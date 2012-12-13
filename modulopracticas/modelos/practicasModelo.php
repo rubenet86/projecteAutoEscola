@@ -171,7 +171,7 @@ function modificaPractica($practica){
 	$db->select_db($bd);
 	if ($db->errno != 0)
 		throw new Exception('Error seleccionando bd:'.$db->error, $db->errno);
-	$consulta = "update practicas set alumno='".$practica->alumno."', profesor='".$practica->profesor."', coche='".$practica->coche."', fecha='".$practica->fecha."' where numPractica='".$practica->numPractica."'";
+	$consulta = "update practicas set alumno='".$practica->loginAlumno."', profesor='".$practica->loginProfesor."', coche='".$practica->matricula."', fecha='".$practica->fecha."' where numPractica='".$practica->numPractica."'";
 	//echo "$consulta";
 	//$consulta = "update items set item='".$item."' where id_item='".$id."'";
 	if ($db->query($consulta) === false)

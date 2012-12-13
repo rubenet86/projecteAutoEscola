@@ -177,6 +177,7 @@ function valida_envia(obj){
 	  		document.getElementById("botoModifica").disabled=true;
 	  }else{
 	  	document.getElementById("botoModifica").disabled=false;
+	  	
 	  }
 	
 	return true;

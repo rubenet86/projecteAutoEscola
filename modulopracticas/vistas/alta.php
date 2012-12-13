@@ -65,8 +65,9 @@ if ($resultadoCoches->num_rows > 0){
 			<div id="calendar-container" style="float: left">
 				<p>Fecha:-------->
 				<input type="text" id="date" name="fecha" size="10"/><br></p>
-				
 			</div>
+			
+			
 			<br><br><br><br><br><br><br><br><br><br><br>			
 			<INPUT TYPE="submit" NAME="nueva" VALUE="Nueva practica" />
 		</FORM>

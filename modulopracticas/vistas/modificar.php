@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Modificacion de encuestas</title>
 	<style type="text/css"></style>
-	<script language="javascript" src="../moduloalumnos/js/modificar_alumnos.js" type="text/javascript"></script>
+	<script language="javascript" src="../modulopracticas/js/modificar_practicas.js" type="text/javascript"></script>
 	<script language="javascript" src="../javascript/validar.js" type="text/javascript"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
 <table width="92%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td colspan="4" align="center" valign="middle"><label>
-	  Login: <input name="buscar" type="text" id="buscar" autocomplete="off"/></label></td>
+	  Num. Practica: <input name="buscar" type="text" id="buscar" autocomplete="off"/></label></td>
     </tr>
 	<tr><td>&nbsp;</td></tr>
     <tr>
@@ -23,13 +23,11 @@
           <td align="center"><label><input type="radio" name="radio" id="radio2" value="radio2"/>Asc</label></td>
 		  <td align="center"><label>
 			<select name="criterio_ord" id="criterio_ord" >
-				<option value="login" >Login</option>	
-					<option value="nombre" >Nombre</option>	
-					<option value="apellido" >Apellido</option>	
-					<option value="dni" >DNI</option>	
-					<option value="email" >email</option>	
-					<option value="telefono" >Telefono</option>	
-					<option value="sexo" >Sexo</option>					
+				<option value="numPractica" >numPractica</option>	
+					<option value="loginA" >Alumno</option>	
+					<option value="loginP" >Profesor</option>	
+					<option value="matricula" >Coche</option>	
+					<option value="fecha" >Fecha</option>				
 			</select>
 		  </label></td>
           <td align="center"><label>
@@ -43,6 +41,9 @@
       </td>
     </tr>
 </table>
+			<div id="calendar-container" style="float: right">
+			<!--	<input type="text" id="date" name="fecha" size="10"/><br></p>-->
+			</div>
 </form>
 <div id="resultado3"></div>
 </body>

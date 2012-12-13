@@ -16,7 +16,7 @@ function presionTecla(e){
   conexion1=crearXMLHttpRequest();
   conexion1.onreadystatechange = procesarEventos;
   buscar=document.getElementById('buscar').value;
-  conexion1.open('GET','../moduloalumnos/modelos/modifica_alumnos_ajax.php?text='+document.form3.buscar.value+"&radio1="+document.form3.radio1.checked+
+  conexion1.open('GET','../modulopracticas/modelos/modifica_practicas_ajax.php?text='+document.form3.buscar.value+"&radio1="+document.form3.radio1.checked+
 	"&radio2="+document.form3.radio2.checked+"&criterio_ord="+document.form3.criterio_ord.value+"&mas="+document.form3.mas.value, true);
   conexion1.send(null);
 }

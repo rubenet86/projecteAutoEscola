@@ -41,14 +41,15 @@ function recogeDatosAlta(){
 
 function recogeDatosModifica(){
 	$practica = new Practica;
-	$practica->loginAlumno=$_POST['loginAlumno'];
-	$practica->loginProfesor=$_POST['loginProfesor'];
+	$practica->loginAlumno=$_POST['loginA'];
+	$practica->loginProfesor=$_POST['loginP'];
 	$practica->matricula=$_POST['matricula'];
 	$practica->fecha=$_POST['fecha'];
 	
+	print_r($_POST);
 	modificaPractica($practica);	
 		
-	header("Location: ./index.php?controlador=practicas&accion=listar");
+	//header("Location: ./index.php?controlador=practicas&accion=listar");
 }
 
 
@@ -62,6 +63,8 @@ function eliminar(){
 }
 
 function modificar(){
+	
+	
 	require_once '../modulopracticas/vistas/modificar.php';
 }
 ?>

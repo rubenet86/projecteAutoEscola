@@ -1,6 +1,11 @@
 <?php
+require_once '../modelos/practicasModelo.php';
 $accion=1;
 require '../../modelo/conexion.php';
+	$resultadoAlumnos = resultadoAlumnos();
+	$resultadoProfesores = resultadoProfesores();
+	$resultadoCoches = resultadoCoches();
+
 
 if($_GET["mas"]!=""){
 	if($_GET["mas"]!="all")
@@ -22,13 +27,13 @@ if($_GET["criterio_ord"]!="")
 else
 	$criterio_ord="id"; 
 	
-$sql="SELECT * FROM alumnos order by $criterio_ord ".$orden." ".$mas;
+$sql="SELECT * FROM practicas order by $criterio_ord ".$orden." ".$mas;
 if($_GET["text"]!=""){
 	$text="%".$_GET["text"]."%";
-	$sql="SELECT * FROM alumnos where login like '$text' order by $criterio_ord ".$orden." ".$mas;
+	$sql="SELECT * FROM practicas where numPractica like '$text' order by $criterio_ord ".$orden." ".$mas;
 }
 else if($_GET["text"]=="")//el us no introduce nada en el input text
-	$sql = "select * from alumnos where login not LIKE '%'";
+	$sql = "select * from practicas where numPractica not LIKE '%'";
 
 $cadena="";
 try{
@@ -44,46 +49,79 @@ try{
 	if ($db->errno != 0)
 		throw new Exception('Error realizando consulta:'.$db->error, $db->errno);
 
-	if ($resultado->num_rows > 0){
+	if ($resultado->num_rows > 1){
 		$cadena.= '<br>';$cadena.= '<br>';$cadena.= '<br>';$cadena.= '<br>';
-			$cadena.='<form name="formulario" action="../controlador/index.php?controlador=alumnos&accion=recogeDatosModifica" method="post">';
+			$cadena.='<form name="formulario" action="../controlador/index.php?controlador=practicas&accion=recogeDatosModifica" method="post">';
 			$cadena.= '<table border="1">';
 			$cadena.='<tr>';
-				$cadena.='<th style="color:#00afff";>Login</th>';
-				$cadena.='<th style="color:#00afff";>Password</th>';
-				$cadena.='<th style="color:#00afff";>Nombre</th>';
-				$cadena.='<th style="color:#00afff";>Apellido</th>';
-				$cadena.='<th style="color:#00afff";>DNI</th>';
-				$cadena.='<th style="color:#00afff";>email</th>';
-				$cadena.='<th style="color:#00afff";>Telefono</th>';
-				$cadena.='<th style="color:#00afff";>Sexo</th>';
+				$cadena.="<th>Num. Practica</th>";
+				$cadena.="<th>Alumno</th>";
+				$cadena.="<th>Profesor</th>";
+				$cadena.="<th>Coche</th>";
+				$cadena.="<th>Fecha</th>";
 			$cadena.='</tr>';
 			while ($obj = $resultado->fetch_object()){
 				LimpiaResultados($obj);
-				
+			
 				$cadena.='<tr>';
-					$cadena.='<td align="center"><input type="text" name="login" size="13" value='.$obj->login.' readonly></td>';
-					$cadena.='<td align="center"><input type="text" name="password" size="13" value='.$obj->password.'  onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="nombre" size="13" value='.$obj->nombre.' onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="apellido" size="13" value='.$obj->apellido.' onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="dni" size="13" value='.$obj->dni.' onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="email" size="13" value='.$obj->email.' onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="telefono" size="13" value='.$obj->telefono.' onblur="valida_envia(this)"></td>';
-					$cadena.='<td align="center"><input type="text" name="sexo" size="13" value='.$obj->sexo.' onblur="valida_envia(this)"></td>'; 
+					$cadena.='<td align="center"><input type="text" name="numPractica" size="13" value='.$obj->numPractica.' readonly></td>';
+					$cadena.='<td align="center"><input type="text" name="loginA" size="13" value='.$obj->alumno.' readonly></td>';
+					$cadena.='<td align="center"><input type="text" name="loginP" size="13" value='.$obj->profesor.' readonly></td>';
+					$cadena.='<td align="center"><input type="text" name="matricula" size="13" value='.$obj->coche.' readonly></td>';
+					$cadena.='<td align="center"><input type="text" name="fecha" size="13" value='.$obj->fecha.' readonly></td>';
 				$cadena.='</tr>';
-			} 
+			}
 			$cadena.='</table>';
-			if($resultado->num_rows==1)
-					$cadena.= '<input type="button" name="modifica" value="Modifica" onclick="enviar()">';	
-			$cadena.='<form>';
-			$cadena.='<section id="divPassword"></section>';
-			$cadena.='<section id="divNombre"></section>';
-			$cadena.='<section id="divApellido"></section>';
-			$cadena.='<section id="divDNI"></section>';
-			$cadena.='<section id="divEmail"></section>';
-			$cadena.='<section id="divSexo"></section>';
 	}
-	$resultado->free(); 
+			else if($resultado->num_rows==1){
+						$cadena.= '<br>';$cadena.= '<br>';$cadena.= '<br>';$cadena.= '<br>';
+			$cadena.='<form name="formulario" action="../controlador/index.php?controlador=practicas&accion=recogeDatosModifica" method="post">';
+			$cadena.= '<table border="1">';
+			$cadena.='<tr>';
+				$cadena.="<th>Num. Practica</th>";
+				$cadena.="<th>Alumno</th>";
+				$cadena.="<th>Profesor</th>";
+				$cadena.="<th>Coche</th>";
+				$cadena.="<th>Fecha</th>";
+			$cadena.='</tr>';
+			while ($obj = $resultado->fetch_object()){
+				LimpiaResultados($obj);
+			
+				$cadena.='<tr>';
+					$cadena.='<td align="center"><input type="text" name="numPractica" size="13" value='.$obj->numPractica.' readonly></td>';
+					$cadena.='<td align="center"><select name="loginA">';										
+	if ($resultadoAlumnos->num_rows > 0){
+		while ( $objA= $resultadoAlumnos->fetch_object()){
+			LimpiaResultados($objA);
+				//echo $objA->login;		
+		$cadena.='<option  value='.$objA->login.'>'.$objA->login.'</option>';
+		}
+	}							
+$cadena.='</select></td>';
+					$cadena.='<td align="center"><input type="text" name="loginP" size="13" value='.$obj->profesor.' ></td>';
+					$cadena.='<td align="center"><input type="text" name="matricula" size="13" value='.$obj->coche.'></td>';
+					$cadena.='<td align="center"><input type="text" value='.$obj->fecha.' id="date" name="fecha" size="10"/></td>';
+				
+	
+			
+				$cadena.='</tr>';
+			}
+			$cadena.='</table>';
+			
+				$cadena.= '<input type="submit" id="botoModifica" name="modifica" value="Modifica" onclick="enviar()">';
+			
+			
+			
+			
+			
+			
+			
+			
+			$cadena.='</form>';
+			
+	}
+	$resultado->free();
+	$resultadoAlumnos->free(); 
 	$db->close(); 
 }catch (Exception $e){
 	echo $e->getMessage();

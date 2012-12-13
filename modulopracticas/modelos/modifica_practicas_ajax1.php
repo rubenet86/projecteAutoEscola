@@ -16,15 +16,11 @@ $id=$_GET['id'];
 echo '<br>';echo '<br>';echo '<br>';echo '<br>';
 
 } else { 
-		$login=$_POST['login'];
-		$password=$_POST['password'];
-		$password=crypt($password,'@j@x');
-		$nombre=$_POST['nombre'];
-		$apellido=$_POST['apellido'];
-		$dni=$_POST['dni'];
-		$email=$_POST['email'];
-		$telefono=$_POST['telefono'];
-		$sexo=$_POST['sexo'];
+		$numPractica=$_POST['numPractica'];
+		$loginAlumno=$_POST['loginA'];
+		$loginProfesor=$_POST['loginP'];
+		$matricula=$_POST['matricula'];
+		$fecha=$_POST['fecha'];
 try{
 	@ $db = new mysqli($servidor, $usuario, $contrasenia);
 	if (mysqli_connect_errno() != 0)
@@ -33,13 +29,13 @@ try{
 	$db->select_db($bd);
 	if ($db->errno != 0)
 		throw new Exception('Error seleccionando bd:'.$db->error, $db->errno);
-	$consulta = "update alumnos set password='".$password."', nombre='".$nombre."', apellido='".$apellido."', dni='".$dni."', email='".$email."', telefono=".$telefono.", sexo='".$sexo."' where login='".$login."'";
+	$consulta = "update practicas set alumno='".$loginAlumno."', profesor='".$loginProfesor."', coche='".$matricula."', fecha='".$fecha."' where numPractica='".$numPractica."'";
 	//$consulta = "update items set item='".$item."' where id_item='".$id."'";
 	if ($db->query($consulta) === false)
 		throw new ExcepcionEnTransaccion();
 	$db->commit();
 	
-	header ("Location:../../index.php?controlador=alumnos&accion=listar");
+	header ("Location:../../index.php?controlador=practicas&accion=listar");
 	$db->close(); 
 }catch (ExcepcionEnTransaccion $e){
 	echo 'No se ha podido realizar la modificacion';
