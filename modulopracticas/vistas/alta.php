@@ -15,7 +15,7 @@ if ($NumPracticas->num_rows == 0){
 			<input type="text" name="numPractica" maxlength="3" size="2" readonly value="<?php echo $obj->numPractica+1 ?>">
 			<?php
 			}
-		?>
+			?>
 		</p>
 		<p>Alumno:----------->
 		<select name="loginA">
@@ -25,8 +25,9 @@ while ( $obj= $resultadoAlumnos->fetch_object()){
 LimpiaResultados($obj);
 
 		?>
-		<option value="<?php echo $obj->login ?>" ><?php echo $obj->login  ?><
-		/option>
+		<option value="<?php echo $obj->login ?>" ><?php echo $obj->login
+		?>
+		</option>
 		<?php
 		}
 		}
@@ -41,8 +42,7 @@ if ($resultadoProfesores->num_rows > 0){
 while ( $obj= $resultadoProfesores->fetch_object()){
 LimpiaResultados($obj);
 		?>
-		<option value="<?php echo $obj->login ?>" ><?php echo $obj->login ?><
-		/option>
+		<option value="<?php echo $obj->login ?>" ><?php echo $obj->login ?></option>
 		<?php
 		}
 		}
@@ -56,8 +56,7 @@ if ($resultadoCoches->num_rows > 0){
 while ( $obj= $resultadoCoches->fetch_object()){
 LimpiaResultados($obj);
 		?>
-		<option value="<?php echo $obj->matricula ?>" ><?php echo $obj->matricula ?><
-		/option>
+		<option value="<?php echo $obj->matricula ?>" ><?php echo $obj->matricula ?></option>
 		<?php
 		}
 		}

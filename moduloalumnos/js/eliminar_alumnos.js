@@ -1,3 +1,11 @@
+/**
+ * @author Rubén Francés
+ * @version 12-2012
+ */
+
+/**
+ * @desc Funcion para obtener la petición AJAX
+ */
 function getXmlHttpRequestObject() {
 	if (window.XMLHttpRequest)
 		return new XMLHttpRequest();
@@ -6,8 +14,14 @@ function getXmlHttpRequestObject() {
 	else
 		alert("Your Browser Sucks!\nIt's about time to upgrade don't you think?");
 }
-
+/**
+ * @global searchReq
+ */
 var searchReq = getXmlHttpRequestObject();
+
+/**
+ * @desc Funcion para realizar la consulta a la BBDD
+ */
 function searchSuggest() {
 	if (searchReq.readyState == 4 || searchReq.readyState == 0) {
 		var txtSearch = escape(document.getElementById('txtSearch').value);

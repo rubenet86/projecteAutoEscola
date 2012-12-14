@@ -1,3 +1,11 @@
+/**
+ * @author Rubén Francés
+ * @version 12-2012
+ */
+
+/**
+ * @desc Funcion para argar los eventos en la pagina 
+ */
 addEvent(window, 'load', inicializarEventos, false);
 function inicializarEventos() {
 	var ob = document.getElementById('login');
@@ -12,7 +20,14 @@ function inicializarEventos() {
 	addEvent(ob4, 'change', presionTecla, false);
 }
 
+/**
+ * @global conexion1
+ */
 var conexion1;
+
+/**
+ * @desc Funcion para mediante AJAX, realizar una consulta a la BBDD cada vez que sea pulsada una tecla
+ */
 function presionTecla(e) {
 	conexion1 = crearXMLHttpRequest();
 	conexion1.onreadystatechange = procesarEventos;
@@ -21,6 +36,9 @@ function presionTecla(e) {
 	conexion1.send(null);
 }
 
+/**
+ * @desc Funcion para mediante AJAX, procesar la consulta segun los eventos pulsados
+ */
 function procesarEventos() {
 	var resultados = document.getElementById("resultados");
 	if (conexion1.readyState == 4) {
@@ -35,6 +53,11 @@ function procesarEventos() {
 //***************************************
 //Funciones comunes a todos los problemas
 //***************************************
+
+
+/**
+ * @desc Funcion para crear los eventos
+ */
 function addEvent(elemento, nomevento, funcion, captura) {
 	if (elemento.attachEvent) {
 		elemento.attachEvent('on' + nomevento, funcion);
@@ -46,6 +69,9 @@ function addEvent(elemento, nomevento, funcion, captura) {
 		return false;
 }
 
+/**
+ * @desc Funcion para crear la petición AJAX
+ */
 function crearXMLHttpRequest() {
 	var xmlHttp = null;
 	if (window.ActiveXObject)

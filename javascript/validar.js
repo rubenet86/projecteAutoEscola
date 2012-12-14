@@ -1,5 +1,19 @@
+/**
+ * @author Rubén Francés
+ * @version 12-2012
+ */
+
+/**
+ * @global contaErrores Variable global para utilizarla como contador
+ */
+
 var contaErrores = 0;
-//document.getElementsByClassName("claseMenu");
+
+/**
+ * @param valor Es el caracter que coge del 'input' telefono
+ * @desc Funcion creada para validar que el caracter introducido es un entero, realiza el parseo a integer.
+ * @returns Devuelve el valor (el numero entero) en el caso que se pueda parsear, en caso contrario devuelve el string vacio
+ */
 function validarEntero(valor) {
 	//intento convertir a entero.
 	//si era un entero no le afecta, si no lo era lo intenta convertir
@@ -15,14 +29,17 @@ function validarEntero(valor) {
 	}
 }
 
-//var conta=0;
+/**
+ * @param campo Es el nombre del elemento 'section' correspondiente al 'input' que esta validando en ese momento donde se mostrará el error
+ * @param texto Es el texto que recoge para mostrarlo en el navegador como error
+ * @desc Funcion para crear un mensaje de error en el navegador cuando el 'input' no supere la validacion,
+ * primero comprueba que no haya ya algun 'hijo' en el campo (ya haya mostrado el error anteriormente), si no hay error lo crea por DOM.
+ */
 function mostraError(campo, texto) {
 	var element = document.getElementById(campo);
 
 	var conta = element.childNodes.length;
-	//alert(conta);
-	//alert(campo);
-	//alert(texto);
+
 	if (conta == 0) {
 		var etiqueta = document.createElement("h6");
 		var node = document.createTextNode(texto);
@@ -32,16 +49,30 @@ function mostraError(campo, texto) {
 	}
 }
 
+/**
+ * @param campo Es el nombre del elemento 'section' correspondiente al 'input' que esta validando en ese momento donde eliminará el error
+ * @desc Funcion para eliminar el mensaje de error en el navegador cuando el 'input' YA supere la validacion,
+ */
 function suprimixError(campo) {
 
 	var element = document.getElementById(campo);
 
 	element.removeChild(element.firstChild);
 
-	//alert("nia");
-
 }
 
+/**
+ *
+ * @param {Object} obj Recibe como parametro el objeto, en este caso el 'input' correspondiente al campo que se esta validando.
+ * @desc Dependiendo de que 'input' estemos validando entrará en una condicion según el nombre del objeto,
+ * cada campo a validar tiene su propia expresión regular que valida que esté correctamente escrito,
+ * si no pasa la validación llama a la funcion 'mostraError' con los parametros correspondientes para que muestre el error en el navegador,
+ * (también desactiva el boton 'Modificar' en el caso que estemos validando los campos en la pagina de modificación, ya que este validador
+ * es usado tanto para dar de alta como para modificar alumnos y profesores)
+ * en el caso que supere la validación, elimina el error que anteriormente habia mostrado en el navegador, y aumenta la variable
+ * 'contaErrores' en uno.
+ * @returns Devuelve true si no hay ningun error, en el momento que haya un error devuelve false.
+ */
 function valida_envia(obj) {
 	erDNI = /^[0-9]{8}[A-Z]$/;
 	erNombre = /^[a-zA-ZñÑáÁéÉíÍóÓúÚüÜ ]{3,20}$/;
@@ -62,6 +93,7 @@ function valida_envia(obj) {
 		//valido el password
 		if (erNombre.test(document.formulario.password.value) == false) {
 			mostraError("divPassword", "Password: Min. 3 caracteres, Max. 20. Sin digitos");
+			document.getElementById("botoModifica").disabled = true;
 			return false;
 		} else {
 			suprimixError("divPassword");
@@ -102,6 +134,7 @@ function valida_envia(obj) {
 			errorForm = true;
 			return false;
 		} else {
+			//valido que sea un DNI valido
 			dni = document.formulario.dni.value;
 			numero = dni.substr(0, dni.length - 1);
 			let = dni.substr(dni.length - 1, 1);
@@ -162,16 +195,23 @@ function valida_envia(obj) {
 			}
 		}
 	}
-	//el formulario se envia
-	//alert("Muchas gracias por registrarse");
-	//
+	/*
+	 * @global errores Variable global utilizada para comprobar si tiene hijos por DOM
+	 * @global erroress Variable global utilizada como contador para contar cuantos hijos tiene la variable 'errores'	 *
+	 */
 	var errores = document.getElementById("divErrores");
 	var erroress = 0;
+	/**
+	 * @desc Recorro el elemento 'errores' para comprobar si tiene hijos, si tiene, aumento en 1 el contador 'erroress'
+	 */
 	for (var i = 0; i < errores.childNodes.length; i++) {
 		if (errores.childNodes[i].childNodes.length > 0) {
 			erroress++;
 		}
 	}
+	/**
+	 * @desc Si 'erroress' es mayor que 0, (hay algun error), desactiva el 'botonModifica', en caso que no haya errores, activa el boton.
+	 */
 	if (erroress > 0) {
 		document.getElementById("botoModifica").disabled = true;
 	} else {
@@ -182,15 +222,21 @@ function valida_envia(obj) {
 	return true;
 }
 
+/**
+ * @desc Funcion creada para enviar el formulario, cuando todos los campos esten validados correctamente,
+ * la variable 'tablaModifica' esta creada para comprobar si existe, si existe significa que estamos validando el formulario de modificacion de usuarios
+ * si no existe, estamos validando el formulario de alta de usuarios.
+ * Para enviar los datos al formualario de alta, tiene que ser el valor de 'contaErrores' igual a 7, ya que hay 7 campos a validar
+ * y cada uno de ellos ha superado la validacion, en caso que no sea igual a 7, muestra un error para que se verifiquen los datos introducidos.
+ * Si existe la 'tablaModifica' entonces el envio del formulario dependerá de si el botón de 'Modificar' esta activado o no.
+ */
 function enviar() {
-	var tablaAlta = document.getElementById("tablaModifica");
-	//alert(tablaAlta);
+	var tablaModifica = document.getElementById("tablaModifica");
 
-	if (tablaAlta == null) {
+	if (tablaModifica == null) {
 		if (contaErrores == 7) {
 			document.formulario.submit();
 		} else {
-			//alert(contaErrores);
 			alert("Revise los campos!");
 		}
 	} else {

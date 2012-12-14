@@ -19,8 +19,9 @@
 			<TR>
 				<TD>Modelo:</TD>
 				<TD>
-				<INPUT TYPE="text" NAME="modelo" SIZE="20" MAXLENGTH="30" required>
+				<INPUT TYPE="text" NAME="modelo" SIZE="20" MAXLENGTH="30" onkeyup="valida_coche(this)" required>
 				</TD>
+				<TD><section id="divModelo"></section></TD>
 			</TR>
 			<TR>
 				<TD>Color:</TD>
