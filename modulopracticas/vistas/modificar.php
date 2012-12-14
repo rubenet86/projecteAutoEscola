@@ -33,24 +33,20 @@
 							<td align="center"><label>
 								<select name="criterio_ord" id="criterio_ord" >
 									<option value="numPractica" >numPractica</option>
-									<option value="loginA" >Alumno</option>
-									<option value="loginP" >Profesor</option>
-									<option value="matricula" >Coche</option>
+									<option value="alumno" >Alumno</option>
+									<option value="profesor" >Profesor</option>
+									<option value="coche" >Coche</option>
 									<option value="fecha" >Fecha</option>
-								</select> </label></td>
-							<td align="center"><label>
-								<select name="mas" id="mas" >
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="all">Todos</option>
 								</select> </label></td>
 						</tr>
 					</td>
 				</tr>
 			</table>
-			<div id="calendar-container" style="float: right">
+			<br>
+			<div id="calendar-container">
 				
 			</div>
+			<br>
 		</form>
 		<div id="resultado3"></div>
 	</body>

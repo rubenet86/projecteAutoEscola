@@ -37,13 +37,8 @@
 									<option value="email" >email</option>
 									<option value="telefono" >Telefono</option>
 									<option value="sexo" >Sexo</option>
-								</select> </label></td>
-							<td align="center"><label>
-								<select name="mas" id="mas" >
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="all">Todos</option>
-								</select> </label></td>
+								</select> </label>
+							</td>
 						</tr>
 					</td>
 					<td>&nbsp;</td>

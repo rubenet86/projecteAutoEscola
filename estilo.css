@@ -68,6 +68,9 @@ h6 {
 	clear: both;
 	margin-top: 7%;
 }
+#resultado3{
+	margin-top: -85px;
+}
 #nada {
 	margin-left: 40%;
 	clear: both;
@@ -254,6 +257,7 @@ li:hover #X3 {
 li:hover #X4 {
 	text-decoration: none;
 	display: inline;
+	z-index: 1;
 }
 
 #Z1 {
@@ -310,10 +314,13 @@ li:hover #Z3 {
 li:hover #Z4 {
 	text-decoration: none;
 	display: inline;
+	z-index: 1;
 }
 
 /* The main calendar widget.  DIV containing a table. */
-
+#frmSearch{
+	width:200px;
+}
 div.calendar {
 	position: relative;
 }

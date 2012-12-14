@@ -8,8 +8,6 @@ function inicializarEventos() {
 	addEvent(ob2, 'click', presionTecla, false);
 	var ob3 = document.getElementById('criterio_ord');
 	addEvent(ob3, 'change', presionTecla, false);
-	var ob4 = document.getElementById('mas');
-	addEvent(ob4, 'change', presionTecla, false);
 }
 
 var conexion1;
@@ -17,7 +15,7 @@ function presionTecla(e) {
 	conexion1 = crearXMLHttpRequest();
 	conexion1.onreadystatechange = procesarEventos;
 	buscar = document.getElementById('buscar').value;
-	conexion1.open('GET', '../modulopracticas/modelos/modifica_practicas_ajax.php?text=' + document.form3.buscar.value + "&radio1=" + document.form3.radio1.checked + "&radio2=" + document.form3.radio2.checked + "&criterio_ord=" + document.form3.criterio_ord.value + "&mas=" + document.form3.mas.value, true);
+	conexion1.open('GET', '../modulopracticas/modelos/modifica_practicas_ajax.php?text=' + document.form3.buscar.value + "&radio1=" + document.form3.radio1.checked + "&radio2=" + document.form3.radio2.checked + "&criterio_ord=" + document.form3.criterio_ord.value, true);
 	conexion1.send(null);
 }
 

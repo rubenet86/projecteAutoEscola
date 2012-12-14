@@ -35,12 +35,6 @@
 									<option value="modelo" >Modelo</option>
 									<option value="color" >Color</option>
 								</select> </label></td>
-							<td align="center"><label>
-								<select name="mas" id="mas" >
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="all">Todos</option>
-								</select> </label></td>
 						</tr>
 					</td>
 					<td>&nbsp;</td>

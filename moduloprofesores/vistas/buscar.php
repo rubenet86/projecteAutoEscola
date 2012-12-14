@@ -11,7 +11,7 @@
 			<br>
 			<table width="92%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
-					<td colspan="4" align="center" valign="middle"><label> Login:
+					<td colspan="4" align="center" valign="middle"><label> Login profesor:
 						<input name="buscar" type="text" id="login" autocomplete="off"/>
 					</label></td>
 				</tr>
@@ -37,13 +37,8 @@
 									<option value="email" >email</option>
 									<option value="telefono" >Telefono</option>
 									<option value="sexo" >Sexo</option>
-								</select> </label></td>
-							<td align="center"><label>
-								<select name="mas" id="mas" >
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="all">Todos</option>
-								</select> </label></td>
+								</select> </label>
+								</td>
 						</tr>
 					</td>
 					<td>&nbsp;</td>

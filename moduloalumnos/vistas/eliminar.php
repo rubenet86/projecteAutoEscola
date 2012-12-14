@@ -25,7 +25,7 @@
 		<div id="tabla" style="width: 100px;" id="search_suggest4">
 			<form id="frmSearch" action="#">
 				<br/>
-				Login:
+				Login alumno:
 				<input type="text" id="txtSearch" name="txtSearch" alt="Search Criteria" onkeyup="searchSuggest();" autocomplete="off" />
 				<br/>
 				<div id="search_suggest"></div>

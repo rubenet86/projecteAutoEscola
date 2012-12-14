@@ -1,12 +1,5 @@
 <?php
 require '../../modelo/conexion.php';
-if ($_GET["mas"] != "") {
-	if ($_GET["mas"] != "all")
-		$mas = "limit 0," . $_GET["mas"];
-	else
-		$mas = "limit 0,100";
-} else
-	$mas = "limit 0,10";
 
 if ($_GET["radio1"] == "true")
 	$orden = "desc";
@@ -20,10 +13,10 @@ if ($_GET["criterio_ord"] != "")
 else
 	$criterio_ord = "login";
 
-$sql = "SELECT * FROM alumnos order by $criterio_ord " . $orden . " " . $mas;
+$sql = "SELECT * FROM alumnos order by $criterio_ord " . $orden;
 if ($_GET["login"] != "") {
 	$login = "%" . $_GET["login"] . "%";
-	$sql = "SELECT * FROM alumnos where login like '$login' order by $criterio_ord " . $orden . " " . $mas;
+	$sql = "SELECT * FROM alumnos where login like '$login' order by $criterio_ord " . $orden;
 } else if ($_GET["login"] == "")//el us no introduce nada en el input text
 	$sql = "select * from alumnos where login not LIKE '%'";
 

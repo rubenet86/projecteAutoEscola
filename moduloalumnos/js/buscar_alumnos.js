@@ -16,8 +16,6 @@ function inicializarEventos() {
 	addEvent(ob2, 'click', presionTecla, false);
 	var ob3 = document.getElementById('criterio_ord');
 	addEvent(ob3, 'change', presionTecla, false);
-	var ob4 = document.getElementById('mas');
-	addEvent(ob4, 'change', presionTecla, false);
 }
 
 /**
@@ -32,7 +30,7 @@ function presionTecla(e) {
 	conexion1 = crearXMLHttpRequest();
 	conexion1.onreadystatechange = procesarEventos;
 	login = document.getElementById('login').value;
-	conexion1.open('GET', '../moduloalumnos/modelos/buscar_alumnos_ajax.php?login=' + document.form1.login.value + "&radio1=" + document.form1.radio1.checked + "&radio2=" + document.form1.radio2.checked + "&criterio_ord=" + document.form1.criterio_ord.value + "&mas=" + document.form1.mas.value, true);
+	conexion1.open('GET', '../moduloalumnos/modelos/buscar_alumnos_ajax.php?login=' + document.form1.login.value + "&radio1=" + document.form1.radio1.checked + "&radio2=" + document.form1.radio2.checked + "&criterio_ord=" + document.form1.criterio_ord.value, true);
 	conexion1.send(null);
 }
 

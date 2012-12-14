@@ -1368,7 +1368,8 @@ Calendar.prototype.show = function() {
 			Calendar.removeClass(cell, "active");
 		}
 	}
-	this.element.style.display = "block";
+	this.element.style.display = "-moz-stack";
+	
 	this.hidden = false;
 	if (this.isPopup) {
 		window._dynarch_popupCalendar = this;

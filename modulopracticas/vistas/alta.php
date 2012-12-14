@@ -63,17 +63,17 @@ LimpiaResultados($obj);
 		?>
 		</select>
 		</p>
-
+		
 		<div id="calendar-container" style="float: left">
 			<p>
 				Fecha:-------->
 				<input type="text" id="date" name="fecha" size="10"/>
 				<br>
+				<br>
 			</p>
 		</div>
-
 		<br>
-		<br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br>
 		<INPUT TYPE="submit" NAME="nueva" VALUE="Nueva practica" />
 	</FORM>
 </div>

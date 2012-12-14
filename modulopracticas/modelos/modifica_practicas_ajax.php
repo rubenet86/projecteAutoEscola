@@ -6,14 +6,6 @@ $resultadoAlumnos = resultadoAlumnos();
 $resultadoProfesores = resultadoProfesores();
 $resultadoCoches = resultadoCoches();
 
-if ($_GET["mas"] != "") {
-	if ($_GET["mas"] != "all")
-		$mas = "limit 0," . $_GET["mas"];
-	else
-		$mas = "limit 0,100";
-} else
-	$mas = "limit 0,10";
-
 if ($_GET["radio1"] == "true")
 	$orden = "desc";
 else if ($_GET["radio2"] == "true")
@@ -26,10 +18,10 @@ if ($_GET["criterio_ord"] != "")
 else
 	$criterio_ord = "id";
 
-$sql = "SELECT * FROM practicas order by $criterio_ord " . $orden . " " . $mas;
+$sql = "SELECT * FROM practicas order by $criterio_ord " . $orden;
 if ($_GET["text"] != "") {
 	$text = "%" . $_GET["text"] . "%";
-	$sql = "SELECT * FROM practicas where numPractica like '$text' order by $criterio_ord " . $orden . " " . $mas;
+	$sql = "SELECT * FROM practicas where numPractica like '$text' order by $criterio_ord " . $orden;
 } else if ($_GET["text"] == "")//el us no introduce nada en el input text
 	$sql = "select * from practicas where numPractica not LIKE '%'";
 
