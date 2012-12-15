@@ -73,10 +73,28 @@ function CompruebaErrorConexionMySQL($mensaje){
 			}else{
 
 			echo "<div id='tabla'>";
-			echo '<p>Usuario o password no validos</p>';
+
+			
 			?>
+			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+				<TABLE>
+					<TR>
+						<TD>Login:</TD>
+						<TD>
+						<INPUT TYPE="text" NAME="login" SIZE="20" MAXLENGTH="30" value="<?php echo $_POST['login'] ?>">
+						</TD>
+					</TR>
+					<TR>
+						<TD>Password:</TD>
+						<TD>
+						<INPUT TYPE="password" NAME="password" SIZE="20" MAXLENGTH="30">
+						</TD>
+					</TR>
+				</TABLE>
+				<INPUT TYPE="submit" NAME="accede" VALUE="Accede">
+			</FORM>
 			<p>
-				[<a href="<?php echo $_SERVER['PHP_SELF'] ?>">Volver a Acceder</a>]
+				[Login o password erroneos]
 			</p>
 			</div>
 			<?php
