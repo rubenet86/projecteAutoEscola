@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*window.onload=function() {
+=======
+function wisi() {
+>>>>>>> f5c6d7d9e8b6f8dc603d757bf664e15da87daee2
 tinyMCE.init({
         // General options
         mode : "textareas",
@@ -34,4 +38,8 @@ tinyMCE.init({
                 staffid : "991234"
         }
 })
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> f5c6d7d9e8b6f8dc603d757bf664e15da87daee2

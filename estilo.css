@@ -65,6 +65,7 @@ h6 {
 
 #map_canvas {
 	float:left;
+<<<<<<< HEAD
 	
 }
 #textee{
@@ -76,6 +77,13 @@ h6 {
     padding-left: 9%;
     padding-top: 8%;
     float:left;
+=======
+	margin-top:20%;
+}
+#texte{
+	padding-top:30%;
+	float:right;
+>>>>>>> f5c6d7d9e8b6f8dc603d757bf664e15da87daee2
 }
 #tabla {
 	margin-left: 40%;
