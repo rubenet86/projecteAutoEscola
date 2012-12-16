@@ -61,7 +61,7 @@ function valida_coche(obj) {
 	//valido la matricula
 	if (obj.name == "matricula") {
 		if (erMatricula.test(document.formulario.matricula.value) == false) {
-			mostraError("divMatricula", "4 digitos y 3 letras MAYUSCULAS");
+			mostraError("divMatricula", "Matricula: 4 digitos y 3 letras MAYUSCULAS");
 			document.getElementById("botoModifica").disabled = true;
 			return false;
 		} else {
@@ -73,7 +73,7 @@ function valida_coche(obj) {
 	//valido la marca
 	if (obj.name == "marca") {
 		if (erNombre.test(document.formulario.marca.value) == false) {
-			mostraError("divMarca", "Min. 3 caracteres, Max. 20. Sin digitos");
+			mostraError("divMarca", "Marca: Min. 3 caracteres, Max. 20. Sin digitos");
 			document.getElementById("botoModifica").disabled = true;
 
 			return false;
@@ -87,7 +87,7 @@ function valida_coche(obj) {
 	//valido la marca
 	if (obj.name == "modelo") {
 		if (erNombre.test(document.formulario.modelo.value) == false) {
-			mostraError("divModelo", "Min. 3 caracteres, Max. 20. Sin digitos");
+			mostraError("divModelo", "Modelo: Min. 3 caracteres, Max. 20. Sin digitos");
 			document.getElementById("botoModifica").disabled = true;
 
 			return false;
@@ -100,7 +100,7 @@ function valida_coche(obj) {
 	//valido el color
 	if (obj.name == "color") {
 		if (erNombre.test(document.formulario.color.value) == false) {
-			mostraError("divColor", "Min. 3 caracteres, Max. 20. Sin digitos");
+			mostraError("divColor", "Color: Min. 3 caracteres, Max. 20. Sin digitos");
 			document.getElementById("botoModifica").disabled = true;
 
 			return false;

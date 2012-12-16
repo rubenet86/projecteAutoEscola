@@ -32,7 +32,7 @@ function recogeDatosAlta() {
 	$practica -> matricula = $_POST['matricula'];
 	$practica -> fecha = $_POST['fecha'];
 
-	print_r($_POST);
+	//print_r($_POST);
 	altaPractica($practica);
 
 	header("Location: ./index.php?controlador=practicas&accion=listar");
@@ -46,7 +46,7 @@ function recogeDatosModifica() {
 	$practica -> matricula = $_POST['matricula'];
 	$practica -> fecha = $_POST['fecha'];
 
-	print_r($_POST);
+	//print_r($_POST);
 	modificaPractica($practica);
 
 	header("Location: ./index.php?controlador=practicas&accion=listar");

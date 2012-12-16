@@ -3,7 +3,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head>
 <body>
 	<section id="tablaResultado">
-	<table border="1">
+	<table id="tablaModifica">
 		<tr>
 			<th>Login</th>
 			<th>Password</th>

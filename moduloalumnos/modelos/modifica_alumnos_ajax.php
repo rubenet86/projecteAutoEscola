@@ -41,16 +41,16 @@ try {
 		$cadena .= '<br>';
 		$cadena .= '<br>';
 		$cadena .= '<form name="formulario" action="../controlador/index.php?controlador=alumnos&accion=recogeDatosModifica" method="post">';
-		$cadena .= '<table id="tablaModifica" border="1">';
+		$cadena .= '<table id="tablaModifica">';
 		$cadena .= '<tr>';
-		$cadena .= '<th style="color:#00afff";>Login</th>';
-		$cadena .= '<th style="color:#00afff";>Password</th>';
-		$cadena .= '<th style="color:#00afff";>Nombre</th>';
-		$cadena .= '<th style="color:#00afff";>Apellido</th>';
-		$cadena .= '<th style="color:#00afff";>DNI</th>';
-		$cadena .= '<th style="color:#00afff";>email</th>';
-		$cadena .= '<th style="color:#00afff";>Telefono</th>';
-		$cadena .= '<th style="color:#00afff";>Sexo</th>';
+		$cadena .= '<th>Login</th>';
+		$cadena .= '<th>Password</th>';
+		$cadena .= '<th>Nombre</th>';
+		$cadena .= '<th>Apellido</th>';
+		$cadena .= '<th>DNI</th>';
+		$cadena .= '<th>email</th>';
+		$cadena .= '<th>Telefono</th>';
+		$cadena .= '<th>Sexo</th>';
 		$cadena .= '</tr>';
 		while ($obj = $resultado -> fetch_object()) {
 			LimpiaResultados($obj);

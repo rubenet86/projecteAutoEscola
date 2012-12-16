@@ -25,7 +25,7 @@ function recogeDatosAlta() {
 	$coche -> modelo = $_POST['modelo'];
 	$coche -> color = $_POST['color'];
 
-	print_r($_POST);
+	//print_r($_POST);
 	altaCoche($coche);
 
 	header("Location: ./index.php?controlador=coches&accion=listar");

@@ -35,12 +35,12 @@ try {
 		throw new Exception('Error realizando consulta:' . $db -> error, $db -> errno);
 
 	if ($resultado -> num_rows > 0) {
-		$cadena .= '<table border="1">';
+		$cadena .= '<table id="tablaModifica">';
 		$cadena .= '<tr>';
-		$cadena .= '<th style="color:#00afff";>Matricula</th>';
-		$cadena .= '<th style="color:#00afff";>Marca</th>';
-		$cadena .= '<th style="color:#00afff";>Modelo</th>';
-		$cadena .= '<th style="color:#00afff";>Color</th>';
+		$cadena .= '<th>Matricula</th>';
+		$cadena .= '<th>Marca</th>';
+		$cadena .= '<th>Modelo</th>';
+		$cadena .= '<th>Color</th>';
 		$cadena .= '</tr>';
 		while ($obj = $resultado -> fetch_object()) {
 			LimpiaResultados($obj);

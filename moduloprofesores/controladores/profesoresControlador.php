@@ -33,7 +33,7 @@ function recogeDatosAlta() {
 	print_r($_POST);
 	altaProfesor($profesor);
 
-	header("Location: ./index.php?controlador=profesores&accion=listar");
+	header("Location: ../index.php?controlador=profesores&accion=listar");
 }
 
 function recogeDatosModifica() {

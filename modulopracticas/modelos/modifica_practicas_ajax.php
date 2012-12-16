@@ -45,7 +45,7 @@ try {
 		$cadena .= '<br>';
 		$cadena .= '<br>';
 		$cadena .= '<form name="formulario" action="../controlador/index.php?controlador=practicas&accion=recogeDatosModifica" method="post">';
-		$cadena .= '<table border="1">';
+		$cadena .= '<table id="tablaModifica">';
 		$cadena .= '<tr>';
 		$cadena .= "<th>Num. Practica</th>";
 		$cadena .= "<th>Alumno</th>";
@@ -71,7 +71,7 @@ try {
 		$cadena .= '<br>';
 		$cadena .= '<br>';
 		$cadena .= '<form name="formulario" action="../controlador/index.php?controlador=practicas&accion=recogeDatosModifica" method="post">';
-		$cadena .= '<table border="1">';
+		$cadena .= '<table id="tablaModifica">';
 		$cadena .= '<tr>';
 		$cadena .= "<th>Num. Practica</th>";
 		$cadena .= "<th>Alumno</th>";

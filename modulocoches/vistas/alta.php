@@ -32,5 +32,9 @@
 			</TR>
 		</TABLE>
 		<INPUT TYPE="button" NAME="alta" VALUE="Alta" onclick="enviar_coche()">
+
+	
 	</FORM>
+
+
 </section>

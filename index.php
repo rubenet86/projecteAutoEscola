@@ -3,8 +3,64 @@
 		<title> Autoescuela Cuela </title>
 		<link href="estilo.css" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+		<script src="https://maps.google.com/maps?file=api&v=2&key=AIzaSyBhqZULIJ8jYl52NbhGZsUpBQWWYwEW8Dg&sensor=true_or_false"
+        type="text/javascript"></script>
+        	<script type="text/javascript" src="javascript/textArea.js"></script>
+		<script type="text/javascript" src="javascript/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+
+  <script type="text/javascript">
+	function initialize() {
+		if (GBrowserIsCompatible()) {
+			var map = new GMap2(document.getElementById("map_canvas"));
+			map.setCenter(new GLatLng(38.825300912779646, -0.6138959999999543), 17);
+			map.setUIToDefault();
+			map.openInfoWindow(map.getCenter(), document.createTextNode("Autoescuela Cuela, esta aqui"));
+
+		}
+		var point = new GLatLng(38.825300912779646, -0.6138959999999543);
+		map.addOverlay(new GMarker(point));
+
+
+tinyMCE.init({
+        // General options
+        mode : "textareas",
+        theme : "advanced",
+        plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+        // Theme options
+        theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|formatselect,fontselect,fontsizeselect",
+        theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+        theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+        theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+        theme_advanced_toolbar_location : "top",
+        theme_advanced_toolbar_align : "left",
+        theme_advanced_statusbar_location : "bottom",
+        theme_advanced_resizing : true,
+
+        // Skin options
+        skin : "o2k7",
+        skin_variant : "silver",
+
+        // Example content CSS (should be your site CSS)
+        content_css : "css/example.css",
+
+        // Drop lists for link/image/media/template dialogs
+        template_external_list_url : "js/template_list.js",
+        external_link_list_url : "js/link_list.js",
+        external_image_list_url : "js/image_list.js",
+        media_external_list_url : "js/media_list.js",
+
+        // Replace values for the template plugin
+        template_replace_values : {
+                username : "Some User",
+                staffid : "991234"
+        }
+})
+	}
+
+    </script>
 	</head>
-	<body>
+	<body onload="initialize()" onunload="GUnload()">
 
 		<div id="cabecera">
 			<p>
@@ -28,7 +84,7 @@ function CompruebaErrorConexionMySQL($mensaje){
 
 	if (isset($_POST['login'])===false){
 ?>
-		<div id="tabla">
+		<div id="tablaIndex">
 			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 				<TABLE>
 					<TR>
@@ -73,10 +129,26 @@ function CompruebaErrorConexionMySQL($mensaje){
 			}else{
 
 			echo "<div id='tabla'>";
-			echo '<p>Usuario o password no validos</p>';
 			?>
+			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+				<TABLE>
+					<TR>
+						<TD>Login:</TD>
+						<TD>
+						<INPUT TYPE="text" NAME="login" SIZE="20" MAXLENGTH="30" value="<?php echo $_POST['login'] ?>">
+						</TD>
+					</TR>
+					<TR>
+						<TD>Password:</TD>
+						<TD>
+						<INPUT TYPE="password" NAME="password" SIZE="20" MAXLENGTH="30">
+						</TD>
+					</TR>
+				</TABLE>
+				<INPUT TYPE="submit" NAME="accede" VALUE="Accede">
+			</FORM>
 			<p>
-				[<a href="<?php echo $_SERVER['PHP_SELF'] ?>">Volver a Acceder</a>]
+				[Login o password erroneos]
 			</p>
 			</div>
 			<?php
@@ -92,11 +164,15 @@ function CompruebaErrorConexionMySQL($mensaje){
 			}
 
 			}
-			?>
+			?></div>
 			<div id="pie">
 				<p>
 					Powered by Ruben Frances
 				</p>
 			</div>
+			<div id="extras">
+	<div id="map_canvas" style="width: 500px; height: 300px"></div> 
+	<textarea id="textee" name="content"></textarea>
+	</div>
 	</body>
 </html>

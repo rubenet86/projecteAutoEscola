@@ -13,6 +13,7 @@ function listar() {
 
 function alta() {
 	require_once '../moduloalumnos/vistas/alta.php';
+	
 }
 
 function recogeDatosAlta() {

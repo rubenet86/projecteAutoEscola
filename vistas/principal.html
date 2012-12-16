@@ -7,8 +7,11 @@
 		<script type="text/javascript" src="../jcalendar/calendar.js"></script>
 		<script type="text/javascript" src="../jcalendar/lang/calendar-es.js"></script>
 		<script type="text/javascript" src="../jcalendar/calendar-setup.js"></script>
+		<script type="text/javascript" src="../javascript/cambia_menu.js"></script>
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+
 	</head>
+
 	<body>
 		<section id="cabecera">
 			<p>
@@ -20,8 +23,8 @@
 				<li id="alumnos">
 					Alumnos
 					<ul>
-						<li id="C1" class="claseMenu" onclick="alert('holaa');">
-							<a href="../controlador/index.php?controlador=alumnos&accion=alta">Alta</a>
+						<li id="C1" class="claseMenu" name="ALTA ALUMNOS" >
+							<a href="../controlador/index.php?controlador=alumnos&accion=alta" onclick="cambia('ALTA ALUMNOS');">Alta</a><!--onclick="cambia('ALTA ALUMNOS');"-->
 						</li>
 						<li id="C2" class="claseMenu">
 							<a href="../controlador/index.php?controlador=alumnos&accion=modificar">Modificar</a>
@@ -72,7 +75,7 @@
 					Practicas
 					<ul>
 						<li id="Z1" class="claseMenu">
-							<a href="../controlador/index.php?controlador=practicas&accion=alta">Nueva</a>
+							<a href="../controlador/index.php?controlador=practicas&accion=alta"  onclick="calendari();">Nueva</a>
 						</li>
 						<li id="Z2" class="claseMenu">
 							<a href="../controlador/index.php?controlador=practicas&accion=modificar">Modificar</a>
@@ -89,6 +92,20 @@
 					<a href="../index.php">Salir</a>
 				</li>
 			</ul>
-			<h2>MENU PRINCIPAL</h2>
+			<section id="menuInfo">
+				<h2 id="texto"></h2>
+			</section>
+
+		</section>
+		<section id="widgets">
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style ">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count" width="200px"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_pinterest_pinit"></a>
+				<a class="addthis_counter addthis_pill_style"></a>
+			</div>
+			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ccbbdf55fdd1ea"></script>
+			<!-- AddThis Button END -->
 		</section>
 
