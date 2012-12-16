@@ -1,4 +1,4 @@
-window.onload=function() {
+function wisi() {
 tinyMCE.init({
         // General options
         mode : "textareas",
@@ -33,5 +33,5 @@ tinyMCE.init({
                 username : "Some User",
                 staffid : "991234"
         }
-});
+})
 }

@@ -41,13 +41,12 @@ try {
 		$cadena .= '<br>';
 		$cadena .= '<br>';
 		$cadena .= '<form name="formulario" action="../controlador/index.php?controlador=coches&accion=recogeDatosModifica" method="post">';
-		$cadena .= '<table id="tablaModifica" border="1">';
-		$cadena .= '<table border="1">';
+		$cadena .= '<table id="tablaModifica">';
 		$cadena .= '<tr>';
-		$cadena .= '<th style="color:#00afff";>Matricula</th>';
-		$cadena .= '<th style="color:#00afff";>Marca</th>';
-		$cadena .= '<th style="color:#00afff";>Modelo</th>';
-		$cadena .= '<th style="color:#00afff";>Color</th>';
+		$cadena .= '<th>Matricula</th>';
+		$cadena .= '<th>Marca</th>';
+		$cadena .= '<th>Modelo</th>';
+		$cadena .= '<th>Color</th>';
 		$cadena .= '</tr>';
 		while ($obj = $resultado -> fetch_object()) {
 			LimpiaResultados($obj);

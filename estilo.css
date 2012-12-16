@@ -5,10 +5,9 @@
 	font-family: Verdana, Arial;
 }
 
-
 body {
-    background-color: #C1FCCC;
-    overflow: hidden;
+	background-color: #C1FCCC;
+	overflow: hidden;
 }
 #cabecera {
 
@@ -41,7 +40,7 @@ body {
 	height: 1.5em;/*para poner un pie de p�gina*/
 	text-align: center;
 }
-#widgets{
+#widgets {
 	float: right;
 }
 #menu {
@@ -59,21 +58,39 @@ h6 {
 	color: red;
 	font-weight: lighter;
 }
+
+::-moz-selection {
+	background: #ffb7b7; /* Firefox */
+}
+
+#map_canvas {
+	float:left;
+	margin-top:20%;
+}
+#texte{
+	padding-top:30%;
+	float:right;
+}
 #tabla {
 	margin-left: 40%;
 	clear: both;
 	margin-top: 7%;
 }
-#tablaModifica tr{
-	background-color:yellow;
+
+#tablaIndex {
+	padding-left: 40%;
+	clear: both;
+	margin-top: 7%;
+}
+#tablaModifica tr {
+	background-color: #FFFF6B;
 	border: solid 1px;
 }
-#tablaModifica th{
-	color:brown;
-	
+#tablaModifica th {
+	color: brown;
 }
-#tablaModifica td{
-	width:100px;
+#tablaModifica td {
+	width: 100px;
 }
 #tablaResultado {
 	margin-left: 20%;
@@ -85,7 +102,7 @@ h6 {
 	clear: both;
 	margin-top: 7%;
 }
-#resultado3{
+#resultado3 {
 	margin-top: -85px;
 }
 #nada {
@@ -335,8 +352,8 @@ li:hover #Z4 {
 }
 
 /* The main calendar widget.  DIV containing a table. */
-#frmSearch{
-	width:200px;
+#frmSearch {
+	width: 200px;
 }
 div.calendar {
 	position: relative;

@@ -3,7 +3,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head>
 <body>
 	<section id="tablaResultadoCoches">
-	<table border="1">
+	<table id="tablaModifica">
 		<tr>
 			<th>Matricula</th>
 			<th>Marca</th>

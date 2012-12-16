@@ -3,8 +3,35 @@
 		<title> Autoescuela Cuela </title>
 		<link href="estilo.css" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+		<script src="https://maps.google.com/maps?file=api&v=2&key=AIzaSyBhqZULIJ8jYl52NbhGZsUpBQWWYwEW8Dg&sensor=true_or_false"
+        type="text/javascript">
+</script>
+
+  <script type="text/javascript">
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(38.825300912779646, -0.6138959999999543), 16);
+        map.setUIToDefault();
+      }
+     // Add 10 markers to the map at random locations
+  var bounds = map.getBounds();
+  var southWest = bounds.getSouthWest();
+  var northEast = bounds.getNorthEast();
+  var lngSpan = northEast.lng() - southWest.lng();
+  var latSpan = northEast.lat() - southWest.lat();
+  for (var i = 0; i < 10; i++) {
+    var point = new GLatLng(southWest.lat() + latSpan * Math.random(),
+        southWest.lng() + lngSpan * Math.random());
+    map.addOverlay(new GMarker(point));
+  }
+
+    }
+
+    </script>
 	</head>
-	<body>
+	<body   onload="initialize()" onunload="GUnload()">
 
 		<div id="cabecera">
 			<p>
@@ -28,7 +55,7 @@ function CompruebaErrorConexionMySQL($mensaje){
 
 	if (isset($_POST['login'])===false){
 ?>
-		<div id="tabla">
+		<div id="tablaIndex">
 			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 				<TABLE>
 					<TR>
@@ -110,11 +137,15 @@ function CompruebaErrorConexionMySQL($mensaje){
 			}
 
 			}
-			?>
+			?></div>
 			<div id="pie">
 				<p>
 					Powered by Ruben Frances
 				</p>
 			</div>
+			<div id="extras">
+	<div id="map_canvas" style="width: 500px; height: 300px"></div> 
+	<textarea id=textee" name="content"></textarea>
+	</div>
 	</body>
 </html>

@@ -1,4 +1,4 @@
-function calendari() {
+window.onload=function() {
 	function dateChanged(calendar) {
 		if (calendar.dateClicked) {
 			var y = calendar.date.getFullYear();

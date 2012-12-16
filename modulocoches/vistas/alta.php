@@ -33,7 +33,7 @@
 		</TABLE>
 		<INPUT TYPE="button" NAME="alta" VALUE="Alta" onclick="enviar_coche()">
 
-	<textarea name="content"></textarea>
+	
 	</FORM>
 
 
