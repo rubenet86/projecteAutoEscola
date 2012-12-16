@@ -4,8 +4,11 @@
 	padding: 0;
 	font-family: Verdana, Arial;
 }
+
+
 body {
-	overflow: hidden;
+    background-color: #C1FCCC;
+    overflow: hidden;
 }
 #cabecera {
 
@@ -38,6 +41,9 @@ body {
 	height: 1.5em;/*para poner un pie de p�gina*/
 	text-align: center;
 }
+#widgets{
+	float: right;
+}
 #menu {
 	width: 100%;
 }
@@ -57,6 +63,17 @@ h6 {
 	margin-left: 40%;
 	clear: both;
 	margin-top: 7%;
+}
+#tablaModifica tr{
+	background-color:yellow;
+	border: solid 1px;
+}
+#tablaModifica th{
+	color:brown;
+	
+}
+#tablaModifica td{
+	width:100px;
 }
 #tablaResultado {
 	margin-left: 20%;
