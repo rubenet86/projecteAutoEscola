@@ -1,7 +1,7 @@
 <section id="tabla">
 
 	<form name="formulario" action="../controlador/index.php?controlador=profesores&accion=recogeDatosAlta" method="post">
-		<TABLE>
+		<TABLE id="tablaAlta">
 			<TR>
 				<TD>Login:</TD>
 				<TD>
@@ -62,4 +62,5 @@
 		</TABLE>
 		<INPUT TYPE="button" NAME="alta" VALUE="Alta" onclick="enviar()">
 	</FORM>
+	<img id="logo" src="../murallin.png"/>
 </section>

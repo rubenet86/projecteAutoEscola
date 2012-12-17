@@ -1,5 +1,6 @@
 <?php
 require_once '../vistas/principal.html';
+
 ?>
 <section>
 	<?php
@@ -21,6 +22,7 @@ require_once '../vistas/principal.html';
 		//Incluimos el controlador o detenemos todo si no existe
 		if (is_file($controlador))
 			require_once $controlador;
+		
 		else
 			die('El controlador no existe - 404 not found');
 
@@ -31,7 +33,10 @@ require_once '../vistas/principal.html';
 			die('La accion no existe - 404 not found');
 	}
 	?>
+	
 </section>
+
 <?php
+
 require_once '../vistas/pie.html';
 ?>

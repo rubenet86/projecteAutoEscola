@@ -1,7 +1,7 @@
 <section id="tabla">
 
 	<form name="formulario" action="../controlador/index.php?controlador=coches&accion=recogeDatosAlta" method="post">
-		<TABLE>
+		<TABLE id="tablaAlta">
 			<TR>
 				<TD>Matricula:</TD>
 				<TD>

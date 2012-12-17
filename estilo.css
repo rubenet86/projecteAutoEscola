@@ -9,6 +9,9 @@ body {
 	background-color: #C1FCCC;
 	overflow: hidden;
 }
+a{
+	text-decoration: none;
+}
 #cabecera {
 
 	width: 100%;
@@ -58,7 +61,11 @@ h6 {
 	color: red;
 	font-weight: lighter;
 }
+#logo{
+	height:90%;
+    padding-left: 55%;
 
+}
 ::-moz-selection {
 	background: #ffb7b7; /* Firefox */
 }
@@ -68,14 +75,19 @@ h6 {
 	
 }
 #textee{
-	padding-top:20%;
-	float:left;
+	padding-top:15%;
+	
+}
+#textee_parent{
+	float:right;
 }
 
 #extras {
-    padding-left: 9%;
-    padding-top: 8%;
+    padding-left: 4%;
+    padding-top: 5%;
     float:left;
+    width:91%;
+    height: 100%;
 }
 #tabla {
 	margin-left: 40%;
@@ -83,12 +95,15 @@ h6 {
 	margin-top: 7%;
 	width:20%;
 }
-
+#ele{
+	float:right;
+}
 
 #tablaIndex {
 	padding-left: 40%;
 	clear: both;
 	margin-top: 7%;
+	float:left;
 }
 #tablaModifica tr {
 	background-color: #FFFF6B;

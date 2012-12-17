@@ -4,20 +4,20 @@
 if ($NumPracticas->num_rows == 0){
 
 		?>
-		<p>Numero practica---->:
+		<p>Numero practica----->:
 		<input type="text" name="numPractica" maxlength="3" size="2" readonly value="1">
 		<?php
 		}else if ($NumPracticas->num_rows > 0){
 		$obj= $NumPracticas->fetch_object();
 		?>
 		<p>
-			Numero practica---->:
+			Numero practica----->:
 			<input type="text" name="numPractica" maxlength="3" size="2" readonly value="<?php echo $obj->numPractica+1 ?>">
 			<?php
 			}
 			?>
 		</p>
-		<p>Alumno:--------->
+		<p>Alumno:------------->
 		<select name="loginA">
 		<?php
 if ($resultadoAlumnos->num_rows > 0){
@@ -34,7 +34,7 @@ LimpiaResultados($obj);
 		?>
 		</select>
 		</p>
-		<p>Profesor:---------->
+		<p>Profesor:------------>
 		<select name="loginP">
 		<?php
 
@@ -49,7 +49,7 @@ LimpiaResultados($obj);
 		?>
 		</select>
 		</p>
-		<p>Coche:--------->
+		<p>Coche:---------->
 		<select name="matricula">
 		<?php
 if ($resultadoCoches->num_rows > 0){
@@ -66,7 +66,7 @@ LimpiaResultados($obj);
 		
 		<div id="calendar-container" style="float: left">
 			<p>
-				Fecha:------->
+				Fecha:-------->
 				<input type="text" id="date" name="fecha" size="10"/>
 				<br>
 				<br>

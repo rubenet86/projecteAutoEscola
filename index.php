@@ -90,7 +90,7 @@ function CompruebaErrorConexionMySQL($mensaje){
 					</TR>
 					<TR>
 						<TD>Password:</TD>
-						<TD>
+				<TD>
 						<INPUT TYPE="password" NAME="password" SIZE="20" MAXLENGTH="30">
 						</TD>
 					</TR>
@@ -115,15 +115,15 @@ function CompruebaErrorConexionMySQL($mensaje){
 
 			}
 			?></div>
-			<div id="pie">
+			
+			<div id="extras">
+	<div id="map_canvas" style="width: 60%; height: 40%"></div> 
+	<textarea id="textee" name="content"></textarea>
+	</div>
+	<div id="pie">
 				<p>
 					Powered by Ruben Frances
 				</p>
 			</div>
-			<div id="extras">
-	<div id="map_canvas" style="width: 500px; height: 300px"></div> 
-	<textarea id="textee" name="content"></textarea>
-	</div>
-	
 	</body>
 </html>
