@@ -10,45 +10,7 @@
 		<script type="text/javascript" src="../javascript/cambia_menu.js"></script>
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
 
-<<<<<<< HEAD
 	</head>
-=======
-		<script type="text/javascript" src="../javascript/textArea.js"></script>
-		<script type="text/javascript" src="../javascript/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-
-<script src="https://maps.google.com/maps?file=api&v=2&key=AIzaSyBhqZULIJ8jYl52NbhGZsUpBQWWYwEW8Dg&sensor=true_or_false"
-        type="text/javascript">
-</script>
-
-  <script type="text/javascript">
-
-    function initialize() {
-      if (GBrowserIsCompatible()) {
-        var map = new GMap2(document.getElementById("map_canvas"));
-        map.setCenter(new GLatLng(38.825300912779646, -0.6138959999999543), 16);
-        map.setUIToDefault();
-      }
-     // Add 10 markers to the map at random locations
-  var bounds = map.getBounds();
-  var southWest = bounds.getSouthWest();
-  var northEast = bounds.getNorthEast();
-  var lngSpan = northEast.lng() - southWest.lng();
-  var latSpan = northEast.lat() - southWest.lat();
-  for (var i = 0; i < 10; i++) {
-    var point = new GLatLng(southWest.lat() + latSpan * Math.random(),
-        southWest.lng() + lngSpan * Math.random());
-    map.addOverlay(new GMarker(point));
-  }
-
-    }
-
-    </script>
-
-</head>
-
-
-
->>>>>>> f5c6d7d9e8b6f8dc603d757bf664e15da87daee2
 
 	<body>
 		<section id="cabecera">
@@ -62,7 +24,7 @@
 					Alumnos
 					<ul>
 						<li id="C1" class="claseMenu" name="ALTA ALUMNOS" >
-							<a href="../controlador/index.php?controlador=alumnos&accion=alta" onclick="cambia('ALTA ALUMNOS');">Alta</a><!--onclick="cambia('ALTA ALUMNOS');"-->
+							<a href="../controlador/index.php?controlador=alumnos&accion=alta">Alta</a><!--onclick="cambia('ALTA ALUMNOS');"-->
 						</li>
 						<li id="C2" class="claseMenu">
 							<a href="../controlador/index.php?controlador=alumnos&accion=modificar">Modificar</a>
@@ -133,7 +95,6 @@
 			<section id="menuInfo">
 				<h2 id="texto"></h2>
 			</section>
-<<<<<<< HEAD
 
 		</section>
 		<section id="widgets">
@@ -147,19 +108,4 @@
 			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ccbbdf55fdd1ea"></script>
 			<!-- AddThis Button END -->
 		</section>
-=======
->>>>>>> f5c6d7d9e8b6f8dc603d757bf664e15da87daee2
-
-		</section>
-		<section id="widgets">
-			<!-- AddThis Button BEGIN -->
-			<div class="addthis_toolbox addthis_default_style ">
-				<a class="addthis_button_facebook_like" fb:like:layout="button_count" width="200px"></a>
-				<a class="addthis_button_tweet"></a>
-				<a class="addthis_button_pinterest_pinit"></a>
-				<a class="addthis_counter addthis_pill_style"></a>
-			</div>
-			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ccbbdf55fdd1ea"></script>
-			<!-- AddThis Button END -->
-		</section>
-		
+		<input id="callbackAlta" type="hidden" value="MENU PRINCIPAL"></input>

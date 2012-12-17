@@ -1,6 +1,7 @@
+<script type="text/javascript" src="../javascript/cambia_menu.js"></script>
 <section id="tabla">
 
-	<form name="formulario" action="../controlador/index.php?controlador=alumnos&accion=recogeDatosAlta" method="post">
+	<form action="../controlador/index.php?controlador=alumnos&accion=recogeDatosAlta" method="post">
 		<TABLE id="tablaAlta">
 			<TR>
 				<TD>Login:</TD>

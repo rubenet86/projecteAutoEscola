@@ -9,10 +9,12 @@ function listar() {
 
 	//Pasa a la vista toda la información que se desea representar
 	require_once '../moduloalumnos/vistas/listar.php';
+	echo '<input id="callbackAlta" type="hidden" value="LISTAR ALUMNOS"></input>';
 }
 
 function alta() {
 	require_once '../moduloalumnos/vistas/alta.php';
+	echo '<input id="callbackAlta" type="hidden" value="ALTA ALUMNOS"></input>';
 	
 }
 
@@ -53,16 +55,17 @@ function recogeDatosModifica() {
 
 function buscar() {
 	require '../moduloalumnos/vistas/buscar.php';
+	echo '<input id="callbackAlta" type="hidden" value="BUSCAR ALUMNOS"></input>';
 }
 
 function eliminar() {
-
 	require '../moduloalumnos/vistas/eliminar.php';
-	header("Location: ./index.php?controlador=alumnos&accion=listar");
+	echo '<input id="callbackAlta" type="hidden" value="ELIMINAR ALUMNOS"></input>';
 
 }
 
 function modificar() {
 	require_once '../moduloalumnos/vistas/modificar.php';
+	echo '<input id="callbackAlta" type="hidden" value="MODIFICAR ALUMNOS"></input>';
 }
 ?>

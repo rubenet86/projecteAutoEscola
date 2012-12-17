@@ -12,6 +12,7 @@ function listar() {
 
 	//Pasa a la vista toda la información que se desea representar
 	require_once '../modulopracticas/vistas/listar.php';
+	echo '<input id="callbackAlta" type="hidden" value="LISTAR PRACTICAS"></input>';
 }
 
 function alta() {
@@ -21,7 +22,7 @@ function alta() {
 	$resultadoCoches = resultadoCoches();
 
 	require_once '../modulopracticas/vistas/alta.php';
-
+	echo '<input id="callbackAlta" type="hidden" value="ALTA PRACTICAS"></input>';
 }
 
 function recogeDatosAlta() {
@@ -54,15 +55,17 @@ function recogeDatosModifica() {
 
 function buscar() {
 	require '../modulopracticas/vistas/buscar.php';
+	echo '<input id="callbackAlta" type="hidden" value="BUSCAR PRACTICAS"></input>';
 }
 
 function eliminar() {
 	require '../modulopracticas/vistas/eliminar.php';
+	echo '<input id="callbackAlta" type="hidden" value="ELIMINAR PRACTICAS"></input>';
 
 }
 
 function modificar() {
-
 	require_once '../modulopracticas/vistas/modificar.php';
+	echo '<input id="callbackAlta" type="hidden" value="MODIFICAR PRACTICAS"></input>';
 }
 ?>

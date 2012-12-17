@@ -12,10 +12,12 @@ function listar() {
 
 	//Pasa a la vista toda la información que se desea representar
 	require_once '../modulocoches/vistas/listar.php';
+	echo '<input id="callbackAlta" type="hidden" value="LISTAR COCHES"></input>';
 }
 
 function alta() {
 	require_once '../modulocoches/vistas/alta.php';
+	echo '<input id="callbackAlta" type="hidden" value="ALTA COCHES"></input>';
 }
 
 function recogeDatosAlta() {
@@ -45,14 +47,17 @@ function recogeDatosModifica() {
 
 function buscar() {
 	require '../modulocoches/vistas/buscar.php';
+	echo '<input id="callbackAlta" type="hidden" value="BUSCAR COCHES"></input>';
 }
 
 function eliminar() {
 	require '../modulocoches/vistas/eliminar.php';
+	echo '<input id="callbackAlta" type="hidden" value="ELIMINAR COCHES"></input>';
 
 }
 
 function modificar() {
 	require_once '../modulocoches/vistas/modificar.php';
+	echo '<input id="callbackAlta" type="hidden" value="MODIFICAR COCHES"></input>';
 }
 ?>

@@ -12,10 +12,12 @@ function listar() {
 
 	//Pasa a la vista toda la información que se desea representar
 	require_once '../moduloprofesores/vistas/listar.php';
+	echo '<input id="callbackAlta" type="hidden" value="LISTAR PROFESORES"></input>';
 }
 
 function alta() {
 	require_once '../moduloprofesores/vistas/alta.php';
+	echo '<input id="callbackAlta" type="hidden" value="ALTA PROFESORES"></input>';
 }
 
 function recogeDatosAlta() {
@@ -55,14 +57,17 @@ function recogeDatosModifica() {
 
 function buscar() {
 	require '../moduloprofesores/vistas/buscar.php';
+	echo '<input id="callbackAlta" type="hidden" value="BUSCAR PROFESORES"></input>';
 }
 
 function eliminar() {
 	require '../moduloprofesores/vistas/eliminar.php';
+	echo '<input id="callbackAlta" type="hidden" value="ELIMINAR PROFESORES"></input>';
 
 }
 
 function modificar() {
 	require_once '../moduloprofesores/vistas/modificar.php';
+	echo '<input id="callbackAlta" type="hidden" value="MODIFICAR PROFESORES"></input>';
 }
 ?>

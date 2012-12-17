@@ -1,3 +1,31 @@
+window.onload=function(){
+	
+	var callback = document.getElementById("callbackAlta");
+	
+	if(callback!=null){
+		var valor = callback.value;
+		callback.parentNode.removeChild(callback);
+	}
+	
+	cambia(valor);
+	
+	function dateChanged(calendar) {
+		if (calendar.dateClicked) {
+			var y = calendar.date.getFullYear();
+			var m = calendar.date.getMonth();
+			var d = calendar.date.getDate();
+			window.location = "#";
+			var fecha = y + "-" + m + "-" + d;
+			document.formulario.fecha.value = fecha;
+		}
+	};
+
+	Calendar.setup({
+		flat : "calendar-container",
+		flatCallback : dateChanged
+	});
+}
+
 function cambia(txt){
 	var etiqueta = document.createElement("h2");
 	var titulo = document.getElementById("menuInfo");
@@ -6,8 +34,4 @@ function cambia(txt){
 	textoNuevo = document.createTextNode(txt);
 	etiqueta.appendChild(textoNuevo);
 	titulo.appendChild(etiqueta);
-	//texto.innerHTML=txt;
-	//titulo.appendChild(textoNuevo);
-	//alert("va?");
-//	return true;
 }
