@@ -13,6 +13,5 @@ function LimpiaResultados($objeto) {
 class ExcepcionEnTransaccion extends Exception {
 	public function __construct() {
 	}
-
 }
 ?>

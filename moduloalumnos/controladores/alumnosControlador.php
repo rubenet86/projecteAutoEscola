@@ -15,7 +15,6 @@ function listar() {
 function alta() {
 	require_once '../moduloalumnos/vistas/alta.php';
 	echo '<input id="callbackAlta" type="hidden" value="ALTA ALUMNOS"></input>';
-	
 }
 
 function recogeDatosAlta() {
@@ -64,7 +63,7 @@ function eliminar() {
 }
 
 function modificar() {
-	require_once '../moduloalumnos/vistas/modificar.php';
+	require_once '../moduloalumnos/vistas/modificar.html';
 	echo '<input id="callbackAlta" type="hidden" value="MODIFICAR ALUMNOS"></input>';
 }
 ?>

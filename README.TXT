@@ -3,6 +3,7 @@ PROJECTE AUTOESCOLA
 Login i password per a accedir:
 Login: hola
 Password: hola
+Es pot punxar a la imatge "L" per a entrar o també INTRO
 ****************************************************************
 Els arxius JSDoc creats amb documentació estàn a la ruta següent:
 jsdoc-toolkit/out

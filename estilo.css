@@ -62,12 +62,13 @@ h6 {
 	font-weight: lighter;
 }
 #logo {
+    bottom: -52px;
     float: left;
     height: 300px;
     left: 630px;
-    padding-left: 26%;
+    margin-left: 26%;
     position: absolute;
-    top: 115px;
+    width: 392px;
 }
 ::-moz-selection {
 	background: #ffb7b7; /* Firefox */
@@ -87,7 +88,7 @@ h6 {
 
 #extras {
     padding-left: 4%;
-    padding-top:5%;
+    padding-top:2%;
     float:left;
     width:91%;
     height: 100%;
@@ -98,15 +99,17 @@ h6 {
 	margin-top: 7%;
 	width:52%;
 }
-#ele{
-	float:right;
+#ele {
+    top: -70px;
+    left: 20%;
+    position: relative;
 }
-
 #tablaIndex {
 	padding-left: 40%;
 	clear: both;
 	margin-top: 7%;
 	float:left;
+	width:100%;
 }
 #tablaModifica tr {
 	background-color: #FFFF6B;
@@ -149,6 +152,20 @@ li {
 	border: 1px solid blue;
 	float: left;
 	text-align: center;
+	
+}
+
+li:hover {
+	width: 150px;
+	height: 20px;
+	color: blue;
+	font-weight:bold;
+	background-color: orange;
+	padding: 10px;
+	border: 1px solid blue;
+	float: left;
+	text-align: center;
+	
 }
 #C1 {
 	position: absolute;

@@ -9,7 +9,6 @@
 			<th>email</th>
 			<th>Telefono</th>
 			<th>Sexo</th>
-			
 		</tr>
 		<?php while ($obj = $alumnos->fetch_object()){		
 				LimpiaResultados($obj);

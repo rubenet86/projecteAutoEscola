@@ -49,7 +49,8 @@ function CompruebaErrorConexionMySQL($mensaje){
 						</TD>
 					</TR>
 				</TABLE>
-				<INPUT TYPE="submit" NAME="accede" VALUE="Accede">
+				<input type="image" src="./images/autoescuela.png" id="ele" />
+				<!--<INPUT TYPE="submit" NAME="accede" VALUE="Accede">-->
 			</FORM>
 
 			<?php
@@ -77,7 +78,7 @@ function CompruebaErrorConexionMySQL($mensaje){
 
 			}else{
 
-			echo "<div id='tabla'>";
+			echo "<div id='tablaIndex'>";
 			?>
 			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 				<TABLE>
@@ -94,11 +95,9 @@ function CompruebaErrorConexionMySQL($mensaje){
 						</TD>
 					</TR>
 				</TABLE>
-				<INPUT TYPE="submit" NAME="accede" VALUE="Accede">
+				<input type="image" src="./images/autoescuela.png" id="ele" />
 			</FORM>
-			<p>
-				[Login o password erroneos]
-			</p>
+		
 			</div>
 			<?php
 			mysqli_free_result($resultadoAlumnos);
