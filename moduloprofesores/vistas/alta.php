@@ -62,5 +62,5 @@
 		</TABLE>
 		<INPUT TYPE="button" NAME="alta" VALUE="Alta" onclick="enviar()">
 	</FORM>
-	<img id="logo" src="../murallin.png"/>
+	
 </section>

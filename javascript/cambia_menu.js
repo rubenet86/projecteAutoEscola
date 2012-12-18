@@ -43,7 +43,5 @@ function cambia(txt){
 }
 
 function animacio(){
-	$('#tablaAlta').effect("slide","slow");
-	$('#logo').effect("slide","slow");
-	
+	$('#tablaAlta').effect("slide","slow");	
 }

@@ -49,7 +49,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-INSERT INTO `alumnos` VALUES ('jaja','@jOYMYaX6vTlk','fss','ddd','48601209R','jaj@jaja.cl',232323232,'Mujer');
+INSERT INTO `alumnos` VALUES ('ana','@j3YXZRkaU8BU','aaaaaa','eeeee','48601209R','email@email.com',444444444,'Hombre'),('hola','@jL.uec/a6kao','hola','hola','48601209R','eme@eje.co',456456466,'Hombre'),('jordi','@j7LOuDFQVOy6','jor','dio','48601209R','email@email.com',533333333,'Hombre'),('nono','@jGZ6zZa2/LfY','nono','nono','48601209R','keke@kek.ca',123465874,'Hombre'),('trtu','@jSB.al8koonc','rturt','ruu','48601209R','wer@gdsa.dsaf',444444444,'Hombre'),('vvv','@jxorVJLG8Q3E','vvv','vvv','48601209R','mail@mail.co',667888888,'Hombre');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +75,7 @@ CREATE TABLE `coches` (
 
 LOCK TABLES `coches` WRITE;
 /*!40000 ALTER TABLE `coches` DISABLE KEYS */;
-INSERT INTO `coches` VALUES ('1212AAA','seat','ibiza','rojo'),('8888DDD','bmw','x3','groc');
+INSERT INTO `coches` VALUES ('1212SSS','tacata','ahaha','ahah'),('1231AAA','man','man','azul'),('1234AAA','renault','clio','amarillo');
 /*!40000 ALTER TABLE `coches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +108,7 @@ CREATE TABLE `practicas` (
 
 LOCK TABLES `practicas` WRITE;
 /*!40000 ALTER TABLE `practicas` DISABLE KEYS */;
-INSERT INTO `practicas` VALUES (1,'jaja','profe','1212AAA','2012-11-01'),(2,'jaja','profe','1212AAA','2012-11-01');
+INSERT INTO `practicas` VALUES (1,'ana','aaa','1212SSS','2012-11-14');
 /*!40000 ALTER TABLE `practicas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,7 @@ CREATE TABLE `profesores` (
 
 LOCK TABLES `profesores` WRITE;
 /*!40000 ALTER TABLE `profesores` DISABLE KEYS */;
-INSERT INTO `profesores` VALUES ('profe','profe','ajaja','sjsjs','48601209R','jeje@jd.cc',232323222,'Mujer');
+INSERT INTO `profesores` VALUES ('aaa','@jdbgN4ESPp42','pad','aaa','48601209R','mme@meme.cqa',333333333,'Hombre'),('eww','@jrdaijpai3oQ','www','wwrt','48601209R','qq@qqa.qa',3,'Hombre'),('ivan','@jIHmv1hSFvhU','ivdd','iva','48601209R','hola@hola.com',999999999,'Hombre');
 /*!40000 ALTER TABLE `profesores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -151,4 +151,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-12-14 12:39:43
+-- Dump completed on 2012-12-18 18:11:45

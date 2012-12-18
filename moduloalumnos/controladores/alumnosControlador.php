@@ -49,7 +49,6 @@ function recogeDatosModifica() {
 	$alumno -> sexo = $_POST['sexo'];
 
 	modificaAlumno($alumno);
-
 	header("Location: ./index.php?controlador=alumnos&accion=listar");
 }
 

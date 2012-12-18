@@ -1,7 +1,5 @@
-
 <section id="tabla">
-
-	<form action="../controlador/index.php?controlador=alumnos&accion=recogeDatosAlta" method="post">
+	<form action="../controlador/index.php?controlador=alumnos&accion=recogeDatosAlta" method="post" name="formulario">
 		<TABLE id="tablaAlta">
 			<TR>
 				<TD>Login:</TD>

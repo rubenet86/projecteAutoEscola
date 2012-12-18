@@ -2,13 +2,11 @@
 	<head>
 		<title> Autoescuela Cuela </title>
 		<link href="estilo.css" rel="stylesheet">
-		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
-		<script src="https://maps.google.com/maps?file=api&v=2&key=AIzaSyBhqZULIJ8jYl52NbhGZsUpBQWWYwEW8Dg&sensor=true_or_false"
-        type="text/javascript"></script>
-        
-		<script type="text/javascript" src="javascript/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<script src="https://maps.google.com/maps?file=api&v=2&key=AIzaSyBhqZULIJ8jYl52NbhGZsUpBQWWYwEW8Dg&sensor=true_or_false" type="text/javascript"></script>
+        <script type="text/javascript" src="javascript/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
 		<script type="text/javascript" src="javascript/maps.js"></script>
-
+		
 	</head>
 	<body onload="initialize()" onunload="GUnload()">
 
@@ -17,6 +15,7 @@
 				Autoescuela Cuela
 			</p>
 		</div>
+		
 		<?php 
 function CompruebaErrorMySQL($mensaje, $conexion){
 	if (mysqli_errno($conexion) != 0){
